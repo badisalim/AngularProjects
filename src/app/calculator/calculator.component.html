@@ -1,0 +1,64 @@
+<div id='calc-contain'>
+  <input type="text" [(ngModel)]="display" name="answer" />
+  <br>
+
+  <input type="button" value="1" (click)="setValue(1)" />
+  <input type="button" value=" 2 " (click)="setValue(2)" />
+  <input type="button" value=" 3 " (click)="setValue(3)" />
+  <input id="color" type="button" value="+" (click)="setCalculation('+')" />
+
+  <input type="button" value=" 4 " (click)="setValue(4)" />
+  <input type="button" value=" 5 " (click)="setValue(5)" />
+  <input type="button" value=" 6 " (click)="setValue(6)" />
+  <input id="color" type="button" value=" - " (click)="setCalculation('-')" />
+
+
+  <input type="button" value=" 7 " (click)="setValue(7)" />
+  <input type="button" value=" 8 " (click)="setValue(8)" />
+  <input type="button" value=" 9 " (click)="setValue(9)" />
+  <input id="color" type="button" value=" x " (click)="setCalculation('*')" />
+
+
+  <input id="color" type="button" value=" c " onclick="calculator.answer.value = ''" />
+  <input type="button" value="0" (click)="setValue(0)" />
+  <input id="color" type="button" value=" = " (click)="calculate()" />
+  <input id="color" type="button" value=" / " (click)="setCalculation('/')" />
+
+  <input type="button" value="." onclick="calculator.answer.value+='.'" />
+
+  <input id="color" type="button" value="AC" onclick="calculator.answer.value=''" />
+  <!-- <form name="calculator"> -->
+  <input type="text" id=text placeholder="enter a number"><br>
+  <input type="text" id=text1><br>
+
+  <div class="calculator">
+
+    <input type="text" class="calculator-screen" value="0" disabled />
+    <div class="calculator-keys"></div>
+
+
+
+
+    <button onclick="sum()">+</button>
+    <button onclick="minus()">-</button>
+    <button onclick="multiply()">*</button>
+    <button onclick="devide()">/</button>
+
+    <button type="button" value="0">0</button>
+    <button type="button" value="1">1</button>
+    <button type="button" value="2">2</button>
+    <button type="button" value="3">3</button>
+    <button type="button" value="4">4</button>
+    <button type="button" value="5">5</button>
+    <button type="button" value="6">6</button>
+    <button type="button" value="7">7</button>
+    <button type="button" value="8">8</button>
+    <button type="button" value="9">9</button>
+
+    <button type="button" class="decimal" value=".">.</button>
+    <button type="button" class="all-clear" value="all-clear">AC</button>
+
+    <button type="button" class="equal-sign" value="=">=</button>
+
+
+  </div>

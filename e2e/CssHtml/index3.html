@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style3.css">
+  <head>
+<body>
+        <h1>My First JavaScript</h1>
+
+        <button type="button"
+        onclick="document.getElementById('demo').innerHTML = Date()">
+        Click me to display Date and Time.</button>
+        
+        <p id="demo"></p>
+-------------------
+<h2>Task Manager</h2>
+<p>What is the next Taske to Do.</p>
+
+<table style="width:50%">
+  <tr>
+    <th>Task</th>
+    <th>DeadLine</th> 
+    <th>Status</th>
+  </tr>
+  <tr>
+    <td>Cleaning</td>
+    <td>10:00</td>
+    <td>finished</td>
+  </tr>
+  <tr>
+    <td>Cooking</td>
+    <td>12:00</td>
+    <td>Pending</td>
+  </tr>
+  <tr>
+    <td>Sleaping</td>
+    <td>19:00</td>
+    <td>net Yet</td>
+  </tr>
+</table>
+---------------------
+<h2>An actevities list</h2>
+
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>  
+----------------
+<h2>HTML Forms</h2>
+
+<form action="/action_page.php">
+  First name:<br>
+  <input type="text" name="firstname" value="Mickey">
+  <br>
+  Last name:<br>
+  <input type="text" name="lastname" value="Mouse">
+  <br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+-------------------------
+<h2>Text Input</h2>
+
+<form>
+  First name:<br>
+  <input type="text" name="firstname">
+  <br>
+  Last name:<br>
+  <input type="text" name="lastname">
+</form>
+
+<p>Note that the form itself is not visible.</p>
+
+<p>Also note that the default width of a text input field is 20 characters.</p>
+------------------------
+<h2>The datalist Element</h2>
+<p>The datalist element specifies a list of pre-defined options for an input element.</p>
+
+<form action="/action_page.php">
+  <input list="browsers" name="browser">
+  <datalist id="browsers">
+    <option value="Internet Explorer">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+  <input type="submit">
+</form>
+
+<p><b>Note:</b> The datalist tag is not supported in Safari or IE9 (and earlier).</p>
+
+----------------------------------
+<h2>Text field</h2>
+<p>The <strong>input type="text"</strong> defines a one-line text input field:</p>
+
+<form action="/action_page.js">
+First name:<br>
+<input type="text" name="firstname">
+<br>
+Last name:<br>
+<input type="text" name="lastname">
+<br><br>
+<input type="submit">
+</form>
+
+<p>Note that the form itself is not visible.</p>
+<p>Also note that the default width of a text field is 20 characters.</p>
+----------------------------------
+<svg height="130" width="500">
+        <defs>
+          <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%"
+            style="stop-color:rgb(255,255,0);stop-opacity:1" />
+            <stop offset="100%"
+            style="stop-color:rgb(255,0,0);stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+        <text fill="#ffffff" font-size="45" font-family="Verdana"
+        x="50" y="86">B.Raslan</text>
+      Sorry, your browser does not support inline SVG.
+      </svg>
+      -------------------------------
+      <label for="">Date</label>
+    <input type="date" name="" id="">  
+    ---------------------------------- 
+    <input type="file" name="" id="">
+    --------------------------------
+    <h2>Radio Buttons</h2>
+
+    <form>
+      <input type="radio" name="gender" value="male" checked> Male<br>
+      <input type="radio" name="gender" value="female"> Female<br>
+      <input type="radio" name="gender" value="other"> Other  
+    </form> 
+     -------------------------------
+     <select placeholder="select your country">
+      <option value="">Austria</option>
+      <option value="">Germany</option>
+      <option value="">Switzerland</option>
+    </select>
+
+
+
+</body>
+</html>

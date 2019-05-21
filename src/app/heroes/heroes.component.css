@@ -1,0 +1,17 @@
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  cursor: pointer;
+  background: #eee;
+}
+
+li:hover {
+  color: #607d8b;
+  background-color: #ddd;
+}
+li span.badge {
+  background-color: red;
+}
