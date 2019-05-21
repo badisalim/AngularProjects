@@ -1,6 +1,6 @@
 <h1>Basket</h1>
 
-<!-- <div *ngFor="let branch of shop">
+<div *ngFor="let branch of shop">
     <h2>{{branch.branch}}</h2>
     <div *ngFor="let basket of branch.baskets">
         <h4>Basket {{basket.name}}</h4>
@@ -10,9 +10,10 @@
         <p>Sum of Basket: {{ calculateBasketTotal(basket)}}</p>
     </div>
     <p>Sum of Branch:  {{ calculateBranchTotal(branch)}}</p>
-</div> -->
+</div>
+---------------------------------------------
 
-<table class="table table-bordered" *ngFor="let branch of shop">
+<!-- <table class="table table-bordered" *ngFor="let branch of shop">
   <h3>{{branch.branch}}</h3>
   <thead class="bg-danger text-white text-upparcase">
     <tr>
@@ -49,9 +50,9 @@
       <td></td>
     </tr>
   </tbody>
-</table>
+</table> -->
 
-
+-------------------------------------------------
 
 
 <!-- <div ng-init="price=0 ;qty=0">

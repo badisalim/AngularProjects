@@ -2,7 +2,7 @@ const fs = require("fs"); // https://nodejs.org/api/fs.html
 
 const {
     calculateBasket
-} = require("./calculateBasket");
+} = require("../../functionalProgramming/calculateBasket");
 
 fs.readFile("mall.json", (err, content) => {
 

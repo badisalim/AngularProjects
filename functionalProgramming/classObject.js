@@ -135,4 +135,5 @@ const moles = {
 
 const name = moles.hover.hover1.product1.name;
 const price = moles.hover.hover1.product1.price
-console.log(name, price);
+const qty = moles.hover.hover1.product1.qty
+console.log(name, price*qty);
