@@ -51,41 +51,21 @@ export class BasketComponent implements OnInit {
   //     ]
   //   }
   // ];
-
-
-//   constructor(private httpClient: HttpClient) { }
-
-//   public shop: { };
-// ngOnInit() {
-//   this.httpClient.get("http://my-json-server.typicode.com/badisalim/AngularProjects/shop").subscribe(shop => this.shop = shop);
-// }
-
-//   public calculateBasketTotal(basket) {
-//   const productsTotal = basket.products.map(product => product.amount * product.price);
-//   return productsTotal.reduce((product1, product2) => product1 + product2);
-// }
-
-//   public calculateBranchTotal(branch) {
-//   return branch.baskets.map(this.calculateBasketTotal).reduce((total1, total2) => total1 + total2);
-// }
-
-//   }
-
   constructor(private httpClient: HttpClient) { }
 
-  public mall: { };
-ngOnInit() {
-  this.httpClient.get("http://my-json-server.typicode.com/badisalim/AngularProjects/mall").subscribe(mall => this.mall = mall);
-}
+  public shop: {};
+  ngOnInit() {
+    this.httpClient.get("http://my-json-server.typicode.com/badisalim/AngularProjects/shop").subscribe(shop => this.shop = shop);
+  }
 
   public calculateBasketTotal(basket) {
-  const productsTotal = basket.products.map(product => product.amount * product.price);
-  return productsTotal.reduce((produc1, produc2) => produc1 + produc2);
-}
+    const productsTotal = basket.products.map(product => product.amount * product.price);
+    return productsTotal.reduce((product1, product2) => product1 + product2);
+  }
 
   public calculateBranchTotal(branch) {
-  return branch.products.map(this.calculateBasketTotal).reduce((total1, total2) => total1 + total2);
-}
+    return branch.baskets.map(this.calculateBasketTotal).reduce((total1, total2) => total1 + total2);
+  }
 
   }
 
