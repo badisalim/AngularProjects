@@ -14,7 +14,7 @@ export class ShoppingCartComponent implements OnInit {
   }
 
   addItem() {
-    this.invoice.push({qty: 1, description: "", cost: 1});
+    this.invoice.push({ qty: 1, description: "", cost: 1 });
   }
 
   total() {
