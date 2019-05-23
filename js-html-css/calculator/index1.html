@@ -14,7 +14,20 @@
     <input type="text" class="calculator-screen" value="0" disabled />
     
     <div class="calculator-keys">
-      
+        <script>
+            function calculate(number1, operator, number2) {
+              switch (operator) {
+                  case "+":
+                      return number1 + number2;
+                  case "-":
+                      return number1 - number2;
+                  case "*":
+                      return number1 * number2;
+                  case "/":
+                      return number1 / number2;
+              }
+          }
+            </script>
       <button type="button" class="operator" value="+">+</button>
       <button type="button" class="operator" value="-">-</button>
       <button type="button" class="operator" value="*">&times;</button>
@@ -40,7 +53,7 @@
       <button type="button" class="all-clear" value="all-clear">AC</button>
   
       <button type="button" class="equal-sign" value="=">=</button>
-  
+ 
     </div>
   </div>
 

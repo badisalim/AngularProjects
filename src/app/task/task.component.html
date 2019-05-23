@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-6">
+    <div class="col-4">
       <h1>Task Manager</h1>
       <ul class="list-group">
         <li *ngFor="let task of tasks; let i=index" class="list-group-item d-flex justify-content-between align-items-center">
@@ -8,7 +8,7 @@
           <div class="progress">
             <div class="progress-bar" [ngStyle]="applyColor(task.progress)" role="progressbar"
               [style.width]="task.progress+'%'" attr.aria-valuenow="{{task.progress}}" aria-valuemin="0"
-              aria-valuemax="100">{{task.progress}}</div>
+              aria-valuemax="50">{{task.progress}}</div>
           </div>
           <input type="number" (input)="changeProgress(i, $event.target.value)" class="change-progress" [value]="task.progress">
         </li>
