@@ -18,11 +18,11 @@ const saveTasks = tasks =>
     )
   );
 
-app
+app 
   .use(cors())
   .use(express.json())
-  .get("/tasks", (req, res) => res.send(tasks))
-  .post("/tasks", (req, res) => {
+  .get("/dbshop", (req, res) => res.send(tasks))
+  .post("/dbshop", (req, res) => {
     const task = req.body;
     task.id = tasks.length + 1;
     tasks.push(task);
