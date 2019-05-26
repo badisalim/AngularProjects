@@ -19,6 +19,8 @@ import { TaskFormComponent } from './task-form/task-form.component';
 import { HeroComponent } from './hero/hero.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { Basket2Component } from './basket2/basket2.component';
+import { Basket3Component } from './basket3/basket3.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     HeroComponent,
     HeroesComponent,
     ShoppingCartComponent,
+    Basket2Component,
+    Basket3Component,
     ],
 
   imports: [
