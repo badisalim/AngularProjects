@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { Task } from '../basket/task';
+import { Task } from '../task/task';
 
 @Component({
   templateUrl: './task.component.html',
   styleUrls: ['./task.component.css']
 })
 export class TaskComponent implements OnInit {
-  tasks: Array<Task> = [{ name: 'Eat', description: '', type: 'event', progress: 50 }];
+  tasks: Array<Task> = [{ name: 'Eat', description: 'eat somthing', type: 'event', progress: 25 }];
   constructor() { }
 
+
   ngOnInit() { }
+
 
   addTaskToList(task: Task) {
     this.tasks.push(task);
@@ -37,3 +39,4 @@ export class TaskComponent implements OnInit {
     this.tasks[index].progress = number;
   }
 }
+

@@ -3,14 +3,18 @@
     <div class="col-4">
       <h1>Task Manager</h1>
       <ul class="list-group">
-        <li *ngFor="let task of tasks; let i=index" class="list-group-item d-flex justify-content-between align-items-center">
+        <li *ngFor="let task of tasks; let i=index"
+          class="list-group-item d-flex justify-content-between align-items-center">
           <span>{{ task.name }}</span>
+
           <div class="progress">
             <div class="progress-bar" [ngStyle]="applyColor(task.progress)" role="progressbar"
               [style.width]="task.progress+'%'" attr.aria-valuenow="{{task.progress}}" aria-valuemin="0"
-              aria-valuemax="50">{{task.progress}}</div>
+              aria-valuemax="50">{{task.progress}}%</div>
+            Buy the grocery<span class="badge badge-secondary"></span>
           </div>
-          <input type="number" (input)="changeProgress(i, $event.target.value)" class="change-progress" [value]="task.progress">
+          <input type="number" (input)="changeProgress(i, $event.target.value)" class="change-progress"
+            [value]="task.progress">
         </li>
       </ul>
     </div>

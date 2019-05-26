@@ -10,7 +10,6 @@ import { SudokuComponent } from './sudoku/sudoku.component';
 import { BasketComponent } from './basket/basket.component';
 import { PasswordComponent } from './password/password.component';
 import { EmailComponent } from './email/email.component';
-import { TasksComponent } from './tasks/tasks.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ChessComponent } from './chess/chess.component';
@@ -31,7 +30,6 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     SudokuComponent,
     BasketComponent,
     PasswordComponent,
-    TasksComponent,
     ProjectsComponent,
     ChessComponent,
     BirdsComponent,

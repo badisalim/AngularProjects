@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-
+import {SHOPS} from './basketData';
 const httpOptions = {
   headers: new HttpHeaders({
-    'Content-Type':  'application/json'
+    'Content-Type': 'application/json'
   })
 };
 
@@ -13,6 +13,7 @@ const httpOptions = {
   styleUrls: ['./basket.component.css']
 })
 export class BasketComponent implements OnInit {
+  shop=SHOPS;
   // public shop = [
   //   {
   //     branch: 'hofer',
@@ -57,11 +58,13 @@ export class BasketComponent implements OnInit {
   //     ]
   //   }
   // ];
-  constructor(private httpClient: HttpClient) { }
+  constructor() { }
 
-  public shop: {};
+
   ngOnInit() {
-    this.httpClient.get('http://localhost:3000/dbshop', httpOptions).subscribe(shop => this.shop = shop);
+    // this.httpClient.get("https://my-json-server.typicode.com/badisalim/AngularProjects/shop")
+    //   //this.httpClient.get('http://localhost:3000/dbshop')
+    //   .subscribe(shop => this.shop = shop);
   }
 
   public calculateBasketTotal(basket) {
@@ -72,8 +75,8 @@ export class BasketComponent implements OnInit {
   public calculateBranchTotal(branch) {
     return branch.baskets.map(this.calculateBasketTotal).reduce((total1, total2) => total1 + total2);
   }
-  public calculateProductTotal(name) {
-    return name.products.map(this.calculateProductTotal).reduce((total1, total2) => total1 + total2);
+  public calculateProductTotal(branch) {
+    return branch.baskets.map(this.calculateBasketTotal).reduce((total1, total2) => total1 + total2);
   }
 
 }

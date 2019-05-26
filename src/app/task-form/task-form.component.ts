@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Task } from '../basket/task';
+import { Task } from '../task/task';
 
 @Component({
   selector: 'app-task-form',
@@ -12,18 +12,20 @@ export class TaskFormComponent implements OnInit {
 
   formGroup: FormGroup;
   isValid = false;
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
     this.formGroup = this.formBuilder.group({
       name: ['', Validators.required],
       description: ['Sleep during the night'],
       type: ['private'],
-      progress: [""]
+      progress: ["25"],
+
     });
 
     this.formGroup.valueChanges.subscribe(() => (this.isValid = this.formGroup.valid));
   }
+
 
   submit() {
     if (this.formGroup.valid) {

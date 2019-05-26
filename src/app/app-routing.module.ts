@@ -7,7 +7,6 @@ import { SudokuComponent } from './sudoku/sudoku.component';
 import { BasketComponent } from './basket/basket.component';
 import { PasswordComponent } from './password/password.component';
 import { EmailComponent } from './email/email.component';
-import { TasksComponent } from './tasks/tasks.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ChessComponent } from './chess/chess.component';
 import { BirdsComponent } from './birds/birds.component';
@@ -45,10 +44,6 @@ const routes: Routes = [
   {
     path: 'email',
     component: EmailComponent
-  },
-  {
-    path: 'tasks',
-    component: TasksComponent
   },
   {
     path: 'projects',
