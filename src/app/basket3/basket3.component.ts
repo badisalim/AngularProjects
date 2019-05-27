@@ -15,11 +15,10 @@ export class Basket3Component implements OnInit {
 
   httpClient: any;
   shop: any;
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
 
   ngOnInit() {
     this.httpClient.get("https://my-json-server.typicode.com/badisalim/AngularProjects/shop")
-    //this.httpClient.get('http://localhost:3000/dbshop')
       .subscribe(shop => this.shop = shop);
   }
 
@@ -38,3 +37,10 @@ export class Basket3Component implements OnInit {
 }
 
 
+// ngOnInit() {
+//   this.httpClient.get('http://localhost:3000/dbshop')
+//     .subscribe(shop => {
+//       console.log(shop);
+//       this.shop = shop;
+//     });
+// }
