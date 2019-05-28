@@ -21,6 +21,7 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { Basket2Component } from './basket2/basket2.component';
 import { Basket3Component } from './basket3/basket3.component';
+import { Calculator2Component } from './calculator2/calculator2.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { Basket3Component } from './basket3/basket3.component';
     ShoppingCartComponent,
     Basket2Component,
     Basket3Component,
+    Calculator2Component,
     ],
 
   imports: [

@@ -17,6 +17,11 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { Basket2Component } from './basket2/basket2.component';
 import { Basket3Component } from './basket3/basket3.component';
+import { Calculator2Component } from './calculator2/calculator2.component';
+
+
+
+
 const routes: Routes = [
   {
     path: 'webdesign',
@@ -85,6 +90,10 @@ const routes: Routes = [
   {
     path: 'basket3',
     component: Basket3Component
+  },
+  {
+    path: 'calculator2',
+    component: Calculator2Component
   },
 
 ];

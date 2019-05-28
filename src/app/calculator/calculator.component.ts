@@ -11,6 +11,13 @@ export class CalculatorComponent implements OnInit {
   constructor() {
   }
 
+
+  public number1: number;
+  public number2: number;
+  public display = '';
+  public result: number;
+  public answer: string;
+
   ngOnInit() {
   }
 
@@ -48,13 +55,6 @@ export class CalculatorComponent implements OnInit {
   }
 
 
-  number1: number;
-  number2: number;
-  display: string = "";
-  result: number;
-  answer: string;
-
-
   add(number1, number2) {
     this.display = (number1 + number2).toString();
   }
@@ -72,19 +72,19 @@ export class CalculatorComponent implements OnInit {
     switch (value) {
       case '+':
         this.number1 = parseInt(this.display);
-        this.display = this.number1.toString() + value;
+        this.display = this.number1 + value;
         break;
       case '-':
         this.number1 = parseInt(this.display);
-        this.display = this.number1.toString() + value;
+        this.display = this.number1 + value;
         break;
       case '*':
         this.number1 = parseInt(this.display);
-        this.display = this.number1.toString() + value;
+        this.display = this.number1 + value;
         break;
       case '/':
         this.number1 = parseInt(this.display);
-        this.display = this.number1.toString() + value;
+        this.display = this.number1 + value;
         break;
 
 
