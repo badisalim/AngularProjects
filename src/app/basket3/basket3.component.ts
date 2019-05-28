@@ -13,7 +13,7 @@ const httpOptions = {
 })
 export class Basket3Component implements OnInit {
 
-  httpClient: any;
+  HttpClient: any;
   shop: any;
   constructor(private httpClient: HttpClient) { }
 
