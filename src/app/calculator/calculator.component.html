@@ -19,16 +19,16 @@
   <input id="color" type="button" value=" x " (click)="setCalculation('*')" />
 
 
-  <input id="color" type="button" value=" c " onclick="calculator.answer.value = ''" />
+  <input id="color" type="button" value=" c " (click)="this.display = ''" />
   <input type="button" value="0" (click)="setValue(0)" />
   <input id="color" type="button" value=" = " (click)="calculate()" />
   <input id="color" type="button" value=" / " (click)="setCalculation('/')" />
 
-  <input type="button" value="." onclick="calculator.answer.value+='.'" />
+  <input type="button" value="." (click)="setFloat()" />
 
-  <input id="color" type="button" value="AC" (click)="calculator.answer.value=''" />
-  
-  
+  <input id="color" type="button" value="AC" (click)="this.display = ''" />
+
+
 
   <!-- <form name="calculator"> -->
 

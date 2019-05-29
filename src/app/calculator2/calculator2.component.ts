@@ -11,6 +11,7 @@ export class Calculator2Component {
   public num1: number;
   public num2: number;
   public result: number;
+
   add() {
     this.result = this.num1 + this.num2;
   }

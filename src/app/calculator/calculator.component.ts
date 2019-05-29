@@ -56,7 +56,7 @@ export class CalculatorComponent implements OnInit {
 
 
   add(number1, number2) {
-    this.display = (number1 + number2).toString();
+    this.display = (parseFloat(number1) + parseFloat(number2)).toString();
   }
   minus(number1, number2) {
     this.display = (number1 - number2).toString();
@@ -71,19 +71,19 @@ export class CalculatorComponent implements OnInit {
   setCalculation(value: string) {
     switch (value) {
       case '+':
-        this.number1 = parseInt(this.display);
+        this.number1 = parseFloat(this.display);
         this.display = this.number1 + value;
         break;
       case '-':
-        this.number1 = parseInt(this.display);
+        this.number1 = parseFloat(this.display);
         this.display = this.number1 + value;
         break;
       case '*':
-        this.number1 = parseInt(this.display);
+        this.number1 = parseFloat(this.display);
         this.display = this.number1 + value;
         break;
       case '/':
-        this.number1 = parseInt(this.display);
+        this.number1 = parseFloat(this.display);
         this.display = this.number1 + value;
         break;
 
@@ -110,7 +110,8 @@ export class CalculatorComponent implements OnInit {
 
   translateCalculation(operator: string) {
     const num1 = this.display.split(operator)[0];
-    const num2 = this.display.split(operator)[0];
+    const num2 = this.display.split(operator)[1];
+
     switch (operator) {
       case '+':
         this.add(num1, num2);
@@ -125,6 +126,10 @@ export class CalculatorComponent implements OnInit {
         this.devide(num1, num2);
         break;
     }
+  }
+
+  setFloat() {
+    this.display += "."
   }
 }
 
