@@ -1,3 +1,41 @@
-<p>
-  sudoku works!
-</p>
+ 
+<h1>SolveSudoku</h1>
+
+<div class="container">
+<script src="../CssHtml/solveSudoku.js"></script>
+    <meta name="description" content="Sudoku">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Sudoku</title>
+    
+
+    <form id="sudoku">
+      <table></table>
+      <input type="button" value="Solve">
+    </form>
+    <script >
+       
+       function populateTable() {
+  var i, j, tr, td, input,
+      table = document.querySelector('form#sudoku table'),
+      tbody = document.createElement('tbody');
+  table.appendChild(tbody);
+  for (i = 0; i < 9; i++) {
+    tr = document.createElement('tr');
+    tbody.appendChild(tr);
+    for (j = 0; j < 9; j++) {            
+      td = document.createElement('td');
+      tr.appendChild(td);
+      input = document.createElement('input');
+      input.type = 'text';
+      input.size = 1;
+      td.appendChild(input);
+    }
+  }
+  document.querySelector('input[value=Solve]')
+    .addEventListener('click',solveSudoku(data));
+}
+
+populateTable();z
+
+    </script>

@@ -1,60 +1,64 @@
 html {
-    background-color: #fa923f;
-    padding: 10px;
+  background-color: #fa923f;
+  padding: 10px;
 }
 
 body {
-    background-color: yellow;
-    padding: 10px;
-    margin: 0;
+  background-color: yellow;
+  padding: 10px;
+  margin: 0;
 }
 
 /*flexbox*/
 .parent {
-    background-color: #f073e1;
-    margin: 10px;
-    padding: 30px;
-    height: 500px;
-    display: flex;
-    flex-flow: row wrap; /*flex-direction flex-wrap*/
-    align-items: center;
-    justify-content:center;
-    align-content: flex-start;
+  background-color: #f073e1;
+  margin: 10px;
+  padding: 30px;
+  height: 500px;
+  display: flex;
+  flex-flow: row wrap;
+  /*flex-direction flex-wrap*/
+  align-items: center;
+  justify-content: center;
+  align-content: flex-start;
 }
 
 .div1 {
-    background-color: #f800db;
-    margin: 5px;
+  background-color: #f800db;
+  margin: 5px;
 }
 
 .div2 {
-    background-color: #f800db;
-    margin: 5px;
-    width: 150px;
-    font-size: 30px;
+  background-color: #4c9b42;
+  margin: 5px;
+  width: 150px;
+  font-size: 30px;
 }
 
 .div3 {
-    background-color: #f800db;
-    margin: 5px;
-    height: 150px;
+  background-color: #4c9b42;
+  margin: 5px;
+  height: 150px;
 }
 
 .div4 {
-    background-color: #f800db;
-    margin: 5px;
-    width: 150px;
-    height: 150px;         
+  background-color: #4c9b42;
+
+  margin: 5px;
+  width: 150px;
+  height: 150px;
 }
 
 .div5 {
-    background-color: #f800db;
-    margin: 5px;
-    width: 200px;           
+  background-color: #4c9b42;
+
+  margin: 5px;
+  width: 200px;
 }
 
 .div6 {
-    background-color: #f800db;
-    margin: 5px;
-    width: 200px;
+  background-color: #4c9b42;
+
+  margin: 5px;
+  width: 200px;
 }

@@ -5,11 +5,14 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './sudoku.component.html',
   styleUrls: ['./sudoku.component.css']
 })
-export class SudokuComponent implements OnInit {
 
+
+export class SudokuComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }
+

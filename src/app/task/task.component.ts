@@ -1,16 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { Task } from '../task/task';
-
+import { TaskService } from '../task.service';
 @Component({
   templateUrl: './task.component.html',
   styleUrls: ['./task.component.css']
 })
 export class TaskComponent implements OnInit {
   tasks: Array<Task> = [{ name: 'Eat', description: 'eat somthing', type: 'event', progress: 25 }];
-  constructor() { }
+  constructor(private service: TaskService) { }
 
 
-  ngOnInit() { }
+  ngOnInit() {
+  this.tasks = this.service.tasks;
+  }
+
+  delete(task: Task) {
+    this.service.deleteTask(task);
+  }
 
 
   addTaskToList(task: Task) {
