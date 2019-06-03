@@ -19,7 +19,7 @@ export class TaskFormComponent implements OnInit {
       name: ['', Validators.required],
       description: ['Sleep during the night'],
       type: ['private'],
-      progress: ["25"],
+      progress: ['25'],
 
     });
 

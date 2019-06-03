@@ -1,4 +1,4 @@
-
+h1{margin-left: 20px;}
 table 
 {
     width: auto;
@@ -7,15 +7,14 @@ table
 table, th, td 
 {
   background-color: rgb(154, 221, 221);
-    border: solid 1px #DDD;
-    border-collapse: collapse;
-    padding: 2px 3px;
-    text-align: center;
+     border-collapse: collapse;
+     text-align: center;
 }
 
 table, th, td 
 {
-    margin:  10px 0;
+    margin-left:  20px ;
+    margin-bottom: 20px;
     border: solid 1px #333;
     padding: 10px 10px;
     font: 15px Verdana;

@@ -1,82 +1,20 @@
 <h1>Basket</h1>
 
 <div *ngFor="let branch of shop">
-    <h2>{{branch.branch}}</h2>
-    <div *ngFor="let basket of branch.baskets">
-        <h4>Basket {{basket.name}}</h4>
-        <ul>
-            <li *ngFor="let product of basket.products">{{product.product}}: Amount={{product.amount}}, Price={{product.price}},Total={{((product.amount*product.price).toFixed(2))}}</li>
-        </ul>
-        <p>Sum of Basket: {{ calculateBasketTotal(basket).toFixed(2)}}</p>
-    </div>
- 
-    <p>Sum of Branch:  {{ calculateBranchTotal(branch).toFixed(2)}}</p>
-    <p>--------------------------------------</p>
+  <h2>{{branch.branch}}</h2>
+  <div *ngFor="let basket of branch.baskets">
+    <h4>Basket {{basket.name}}</h4>
+    <ul>
+      <li *ngFor="let product of basket.products">{{product.product}}: Amount={{product.amount}},
+        Price={{product.price}},Total={{((product.amount*product.price).toFixed(2))}}</li>
+    </ul>
+    <p>Sum of Basket: {{ calculateBasketTotal(basket).toFixed(2)}}</p>
+  </div>
 
-    
-</div> 
- <p>Sum of Product:  {{ calculateProductTotal(branch).toFixed(2)}}</p> 
- <p>Sum of Total Sales:  {{ calculateProductTotal(branch).toFixed(2)}}</p> 
+  <p>Sum of Branch: {{ calculateBranchTotal(branch).toFixed(2)}}</p>
+  <p>--------------------------------------</p>
+
+</div>
+<p>Sum of Product: {{ calculateProductTotal(product).toFixed(2)}}</p>
+<p>Sum of Total Sales: {{ calculateProductTotal(branch).toFixed(2)}}</p>
 ---------------------------------------------
-
-<!-- <table class="table table-bordered" *ngFor="let branch of shop">
-  <h3>{{branch.branch}}</h3>
-  <thead class="bg-danger text-white text-upparcase">
-    <tr>
-      <th>Product</th>
-      <th>Quantity</th>
-      <th>Price</th>
-      <th>Total</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let basket of branch.baskets">
-      <td>{{basket.name}}</td>
-    <div *ngFor="let product of basket.products">
-      <td>
-        <input type="text" [value]="product.product" class="form-control">
-      </td>
-      <td>
-        <input type="number" [value]="product.amount" min="1" class="form-control">
-      </td>
-      <td>
-        <input type="number" [value]="product.price" min="1" class="form-control">
-      </td>
-      <td></td>
-      <td>
-        <button class="btn btn-sm btn-danger"><img width="20px" src="../../assets/icon/trash.png" /></button>
-      </td>
-      <div>{{calculateBasketTotal(basket)}}</div>
-    </div>
-    <tr>
-      <td><button class="btn btn-sm btn-primary rounded-0">Add Product</button></td>
-      <td></td>
-      <td>Total: {{ calculateBranchTotal(branch) }}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table> -->
-
--------------------------------------------------
-
-
-<!-- <div ng-init="price=0 ;qty=0">
-  <p>
-    basket works!
-  </p>
-  Select product:
-  <select ng-model="price">
-    <option value="2">Apple</option>
-    <option value="2.5">orange </option>
-    <option value="3">banana</option>
-  </select>
-
-  Quantity:<input ng-model="qty" />
-  <h1>Price:{{price}}</h1>
-  <h1>Total:{{price*qty}}</h1>
-</div> -->
-
-
-
-

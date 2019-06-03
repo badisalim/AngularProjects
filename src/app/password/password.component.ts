@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { isNumber } from 'util';
 
 @Component({
   selector: 'app-password',
@@ -13,7 +14,7 @@ export class PasswordComponent implements OnInit {
   }
   checkPassword = (password1, password2) => {
     if (password1 === '' && password2 === '') {
-      console.log("Please enter Password")
+      console.log('Please enter Password')
       return false;
     } else if (password1 !== password2) {
       return false;
@@ -39,6 +40,6 @@ export class PasswordComponent implements OnInit {
     return regExp.test(password);
   }
   verification = (password1, password2) => {
-    return this.checkPassword(password1, password2) && this.isLargerThan8(password1) && this.isNumber(password1) && this.isLowerCase(password1) && this.isUpperCase(password1) ? true : false;
+    return this.checkPassword(password1, password2) && this.isLargerThan8(password1) && isNumber(password1) && this.isLowerCase(password1) && this.isUpperCase(password1) ? true : false;
   }
 }

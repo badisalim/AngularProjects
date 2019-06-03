@@ -11,36 +11,38 @@ export class TaskComponent implements OnInit {
 
 
   ngOnInit() {
-  this.tasks = this.service.tasks;
+    this.tasks = this.service.tasks;
   }
 
   delete(task: Task) {
+    console.log(task);
     this.service.deleteTask(task);
   }
-
 
   addTaskToList(task: Task) {
     this.tasks.push(task);
   }
 
-  applyColor(number) {
+// tslint:disable-next-line: variable-name
+  applyColor(number: number) {
     switch (true) {
       case (number <= 25):
-        return { "background-color": "red" };
+        return { 'background-color': 'red' };
       case (number <= 50 && number > 25):
         return {
-          "background-color": "violet"
+          'background-color': 'violet'
         };
       case (number > 50 && number <= 75):
-        return { "background-color": "blue" };
+        return { 'background-color': 'blue' };
       case (number > 75):
         return {
-          "background-color": "green"
+          'background-color': 'green'
         };
     }
   }
 
-  changeProgress(index, number) {
+// tslint:disable-next-line: variable-name
+  changeProgress(index: string | number, number: number) {
     console.log(index, number);
     this.tasks[index].progress = number;
   }
