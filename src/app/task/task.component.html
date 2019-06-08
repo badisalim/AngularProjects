@@ -11,17 +11,17 @@
             <div class="progress-bar" [ngStyle]="applyColor(task.progress)" role="progressbar"
               [style.width]="task.progress+'%'" attr.aria-valuenow="{{task.progress}}" aria-valuemin="0"
               aria-valuemax="50">{{task.progress}}%</div>
-           <span class="badge badge-secondary"></span>
-          </div>
+            <span class="badge badge-secondary"></span>
+          </div>{{task.description}}
           <input type="number" (input)="changeProgress(i, $event.target.value)" class="change-progress"
-            [value]="task.progress">Buy the grocery<button class="btn btn-warning " (click)="delete(this.display)">Delete</button>
+            [value]="task.progress">under progress<button class="btn btn-danger " (click)="delete(task)">Delete
+            Task</button>
+
         </li>
       </ul>
 
-     
     </div>
-    <div class="col-6">
+    <div class="col-8">
       <app-task-form (addTask)="addTaskToList($event)"></app-task-form>
     </div>
   </div>
-</div>

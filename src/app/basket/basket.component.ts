@@ -17,11 +17,8 @@ export class BasketComponent implements OnInit {
 
   constructor() { }
 
-
   ngOnInit() {
-    // this.httpClient.get("https://my-json-server.typicode.com/badisalim/AngularProjects/shop")
-    //   //this.httpClient.get('http://localhost:3000/dbshop')
-    //   .subscribe(shop => this.shop = shop);
+
   }
 
   public calculateBasketTotal(basket) {
@@ -34,9 +31,9 @@ export class BasketComponent implements OnInit {
   }
 
 
-  public calculateProductTotal(branch) {
-  return branch.baskets.map(this.calculateBasketTotal).reduce((total1, total2) => total1 + total2);
-}
+  public calculateProductTotal(product) {
+    return product.products.product.map(this.calculateBasketTotal).reduce((total1, total2) => total1 + total2);
+  }
 
 }
 

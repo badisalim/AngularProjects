@@ -1,10 +1,12 @@
 #chessboard {
   width: 670px;
   height: 670px;
-  margin: 200px auto;
+  margin: 10px auto;
   border: 15px solid rgb(185, 22, 22);
 }
-
+h1{
+  margin-left: 450px;
+}
 div.black {
   float: left;
   width: 80px;

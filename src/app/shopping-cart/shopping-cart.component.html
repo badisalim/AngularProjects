@@ -13,7 +13,7 @@
     <tbody>
       <tr *ngFor="let item of invoice; let id=index">
         <td>
-          <input type="text" [(ngModel)]="item.description" class="form-control">
+          <input type="text" [(ngModel)]="item.description" class="form-control"z>
         </td>
         <td>
           <input type="number" min="1" [(ngModel)]="item.qty" class="form-control">

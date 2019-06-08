@@ -22,20 +22,6 @@ export class Basket3Component implements OnInit {
       .subscribe(shop => this.shop = shop);
   }
 
-  public calculateBasketTotal(basket) {
-    const productsTotal = basket.products.map(product => product.amount * product.price);
-    return productsTotal.reduce((product1, product2) => product1 + product2);
-  }
-
-  public calculateBranchTotal(branch) {
-    return branch.baskets.map(this.calculateBasketTotal).reduce((total1, total2) => total1 + total2);
-  }
-  public calculateProductTotal(branch) {
-    return branch.baskets.map(this.calculateBasketTotal).reduce((total1, total2) => total1 + total2);
-  }
-
-}
-
 
 // ngOnInit() {
 //   this.httpClient.get('http://localhost:3000/dbshop')
@@ -44,3 +30,20 @@ export class Basket3Component implements OnInit {
 //       this.shop = shop;
 //     });
 // }
+
+  public calculateBasketTotal(basket) {
+    const productsTotal = basket.products.map(product => product.amount * product.price);
+    return productsTotal.reduce((product1, product2) => product1 + product2);
+  }
+
+  public calculateBranchTotal(branch) {
+    return branch.baskets.map(this.calculateBasketTotal).reduce((total1, total2) => total1 + total2);
+  }
+  public calculateProductTotal(product) {
+    return product.baskets.map(this.calculateBasketTotal).reduce((total1, total2) => total1 + total2);
+  }
+
+}
+
+
+
