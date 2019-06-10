@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { SHOPS } from './basketData';
+import { Product, BranchInProduct } from '../types';
+import { MapperService } from '../mapper.service';
+import { purchases } from '../purchases';
+
+
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type': 'application/json'
@@ -14,11 +19,11 @@ const httpOptions = {
 })
 export class BasketComponent implements OnInit {
   shop = SHOPS;
-
-  constructor() { }
+  products: Product[];
+  constructor(private mapper: MapperService) { }
 
   ngOnInit() {
-
+    this.products = this.mapper.mapToProducts(purchases);
   }
 
   public calculateBasketTotal(basket) {
@@ -29,12 +34,13 @@ export class BasketComponent implements OnInit {
   public calculateBranchTotal(branch) {
     return branch.baskets.map(this.calculateBasketTotal).reduce((total1, total2) => total1 + total2);
   }
-
-
-  public calculateProductTotal(product) {
-    return product.products.product.map(this.calculateBasketTotal).reduce((total1, total2) => total1 + total2);
+  calculateBranchTotal2(branch: BranchInProduct) {
+    return branch.basketItems.map(bi => bi.price * bi.amount).reduce((bi1, bi2) => bi1 + bi2);
   }
 
-}
+  public calculateProductTotal(product: Product) {
+    return product.branches.map(this.calculateBranchTotal2).reduce((total1, total2) => total1 + total2);
 
+  }
+}
 
