@@ -14,7 +14,7 @@
   <p>Sum of Branch: {{ calculateBranchTotal(branch).toFixed(2)}}</p>
   <p>--------------------------------------</p>
 
-
+  
 
 
 </div>
@@ -26,7 +26,12 @@
     <h4>{{ branch.name }}</h4>
     <table class="table">
       <thead>
+
+            <a routerLink="/add-product" class="btn btn-primary">Add Product</a>
+            
+
         <tr>
+          
           <th>Basket</th>
           <th>Product</th>
           <th>Code</th>
@@ -51,6 +56,8 @@
   </ng-container>
   <h4>Product Total: {{ calculateProductTotal(product) | currency: '€ ':'symbol':'1.2-2' }}</h4>
 </ng-container>
-<p>Product Total: {{ calculateProductTotal(product).toFixed(2)}}</p>
-<p>Sum of Total Sales: {{ calculateProductTotal(branch).toFixed(2)}}</p>
+<!-- <p>Product Total: {{ calculateProductTotal(product).toFixed(2)}}</p> -->
+<!-- <p>Sum of Total Sales: {{ calculateProductTotal(branch).toFixed(2)}}</p> -->
 ---------------------------------------------
+
+

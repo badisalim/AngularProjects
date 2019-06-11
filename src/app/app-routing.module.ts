@@ -18,9 +18,11 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { Basket2Component } from './basket2/basket2.component';
 import { Basket3Component } from './basket3/basket3.component';
 import { Calculator2Component } from './calculator2/calculator2.component';
-
-
-
+import { AddProductComponent } from './add-product/add-product.component';
+import { EditProductComponent } from './edit-product/edit-product.component';
+import { ProductsComponent } from './products/products.component';
+import { ProductsContainerComponent } from './products-container/products-container.component';
+import { ProductFormComponent } from './product-form/product-form.component';
 
 const routes: Routes = [
   {
@@ -95,6 +97,26 @@ const routes: Routes = [
     path: 'calculator2',
     component: Calculator2Component
   },
+  {
+    path: 'add-product',
+    component: AddProductComponent
+  },
+  {
+    path: 'edit-product',
+    component: ProductFormComponent
+  },
+  {
+    path: 'products',
+    component: ProductsComponent
+  },
+  {
+    path: 'product-container',
+    component: ProductsContainerComponent
+  },
+  {
+    path: 'product-form',
+    component: ProductFormComponent
+  }
 
 ];
 

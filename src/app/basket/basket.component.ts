@@ -4,7 +4,7 @@ import { SHOPS } from './basketData';
 import { Product, BranchInProduct } from '../types';
 import { MapperService } from '../mapper.service';
 import { purchases } from '../purchases';
-
+import { Branch, Basket } from '../types';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -19,11 +19,13 @@ const httpOptions = {
 })
 export class BasketComponent implements OnInit {
   shop = SHOPS;
+  branches: Branch[];
   products: Product[];
   constructor(private mapper: MapperService) { }
 
   ngOnInit() {
     this.products = this.mapper.mapToProducts(purchases);
+    this.branches = this.mapper.mapToBranches(purchases);
   }
 
   public calculateBasketTotal(basket) {

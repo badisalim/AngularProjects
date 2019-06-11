@@ -28,6 +28,7 @@ export interface Basket {
 }
 
 export interface Product {
+  map: any;
     name: string;
     branches: BranchInProduct[];
 }

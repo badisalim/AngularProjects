@@ -22,6 +22,11 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { Basket2Component } from './basket2/basket2.component';
 import { Basket3Component } from './basket3/basket3.component';
 import { Calculator2Component } from './calculator2/calculator2.component';
+import { AddProductComponent } from './add-product/add-product.component';
+import { EditProductComponent } from './edit-product/edit-product.component';
+import { ProductsComponent } from './products/products.component';
+import { ProductsContainerComponent } from './products-container/products-container.component';
+import { ProductFormComponent } from './product-form/product-form.component';
 
 
 @NgModule({
@@ -45,6 +50,11 @@ import { Calculator2Component } from './calculator2/calculator2.component';
     Basket2Component,
     Basket3Component,
     Calculator2Component,
+    AddProductComponent,
+    EditProductComponent,
+    ProductsComponent,
+    ProductsContainerComponent,
+    ProductFormComponent,
 
   ],
 
