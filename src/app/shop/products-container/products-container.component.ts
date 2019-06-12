@@ -15,7 +15,7 @@ export interface Product {
 })
 
 export class ProductsContainerComponent implements OnInit {
-  private url = 'http://localhost:3000/products';
+  private url = 'http://localhost:3000/shop/products';
   products$: Observable<Product[]>;
   constructor(private httpClient: HttpClient) { }
 

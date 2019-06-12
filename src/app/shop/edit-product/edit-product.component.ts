@@ -15,13 +15,13 @@ export class EditProductComponent implements OnInit {
 
   ngOnInit() {
     const id = this.route.snapshot.params.id;
-    this.product$ = this.httpClient.get<Product>(`http://localhost:3000/products/${id}`);
+    this.product$ = this.httpClient.get<Product>(`http://localhost:3000/shop/products/${id}`);
   }
 
   async submit(product) { }
 
   async remove(product) {
-    await this.httpClient.delete(`http://localhost:3000/products/${product.id}`).toPromise();
-    this.router.navigateByUrl('/products');
+    await this.httpClient.delete(`http://localhost:3000/shop/products/${product.id}`).toPromise();
+    this.router.navigateByUrl('/shop/products');
   }
 }

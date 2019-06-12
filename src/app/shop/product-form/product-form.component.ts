@@ -1,6 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Product } from '../products-container/products-container.component';
+import { ProductsService } from '../products.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-form',
@@ -11,7 +13,10 @@ export class ProductFormComponent implements OnInit {
   @Input() product: Product;
   @Output() save = new EventEmitter<Product>();
   formGroup: FormGroup;
-  constructor(private formBuilder: FormBuilder) { }
+  routerNavigateByUrl: any;
+  form: any;
+
+  constructor(private formBuilder: FormBuilder, private productsService: ProductsService, private router: Router) { }
 
   ngOnInit() {
     this.formGroup = this.formBuilder.group({
@@ -25,7 +30,11 @@ export class ProductFormComponent implements OnInit {
 
   async submit() {
     if (this.formGroup.valid) {
-      this.save.emit(this.formGroup.value);
+      console.log(this.formGroup.value);
+      await this.productsService.addProduct(this.formGroup.value);
+      // this.save.emit(this.formGroup.value);
+      this.router.navigateByUrl('/shop/products');
     }
   }
+
 }

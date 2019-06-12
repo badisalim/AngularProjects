@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { Mapper.Service.TsComponent } from './mapper.service';
 
 describe('Mapper.Service.TsComponent', () => {
@@ -8,9 +7,9 @@ describe('Mapper.Service.TsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ Mapper.Service.TsComponent ]
+      declarations: [Mapper.Service.TsComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

@@ -4,7 +4,6 @@ import { WebdesignComponent } from './webdesign/webdesign.component';
 import { ParticipantComponent } from './participant/participant.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { SudokuComponent } from './sudoku/sudoku.component';
-import { BasketComponent } from './basket/basket.component';
 import { PasswordComponent } from './password/password.component';
 import { EmailComponent } from './email/email.component';
 import { ProjectsComponent } from './projects/projects.component';
@@ -18,11 +17,12 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { Basket2Component } from './basket2/basket2.component';
 import { Basket3Component } from './basket3/basket3.component';
 import { Calculator2Component } from './calculator2/calculator2.component';
-import { AddProductComponent } from './add-product/add-product.component';
-import { EditProductComponent } from './edit-product/edit-product.component';
-import { ProductsComponent } from './products/products.component';
-import { ProductsContainerComponent } from './products-container/products-container.component';
-import { ProductFormComponent } from './product-form/product-form.component';
+import { BasketComponent } from './shop/basket/basket.component';
+import { AddProductComponent } from './shop/add-product/add-product.component';
+import { EditProductComponent } from './shop/edit-product/edit-product.component';
+import { ProductsComponent } from './shop/products/products.component';
+import { ProductsContainerComponent } from './shop/products-container/products-container.component';
+import { ProductFormComponent } from './shop/product-form/product-form.component';
 
 const routes: Routes = [
   {
@@ -40,10 +40,6 @@ const routes: Routes = [
   {
     path: 'sudoku',
     component: SudokuComponent
-  },
-  {
-    path: 'basket',
-    component: BasketComponent
   },
   {
     path: 'password',
@@ -96,6 +92,14 @@ const routes: Routes = [
   {
     path: 'calculator2',
     component: Calculator2Component
+  },
+  {
+    path: 'basket',
+    component: BasketComponent
+  },
+  {
+    path: 'edit-product/:id',
+    component: EditProductComponent
   },
   {
     path: 'add-product',
