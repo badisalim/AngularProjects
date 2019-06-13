@@ -66,8 +66,8 @@ export class Basket2Component implements OnInit {
   public calculateBranchTotal(branch) {
     return branch.baskets.map(this.calculateBasketTotal).reduce((total1, total2) => total1 + total2);
   }
-  public calculateProductTotal(branch) {
-    return branch.baskets.map(this.calculateBasketTotal).reduce((total1, total2) => total1 + total2);
+  public calculateProductTotal(shop) {
+    return shop.branch.baskets.map(this.calculateBranchTotal).reduce((total1, total2) => total1 + total2);
   }
 
 }

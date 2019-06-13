@@ -1,0 +1,30 @@
+
+
+* ng new angular-projects (creat new Angular projects)
+* cd angular-projects
+* ng g c name (creat new component project)
+* ng g s name (creat service)
+* code .(to open angular-projects)
+* ng serve -o(to run the program ----port 4200)
+* ng serve --port 4201 -o (to run in other browser)
+* ctr+c (to stope program)
+* https://my-json-server.typicode.com/badisalim/AngularProjects/mall.
+-- node server/server.js(to open locaihost:3000/dbshop)
+-- make db.json file push to github then go to my-json-server then add your github adress with filename
+* my-json-server.typicode.com/baisalim/angular projects/shop
+
+
+* github Collaborators then add collaborator(name account).....this to allow freind to access my github
+
+ng g s name      (create module file)
+ng g s name      (creat service file)
+
+node server/server.js  (to run server localhost)
+
+
+to store and load images in github.
+
+github/AngularProjects/assets/image/download
+then copy http adress
+put it in your html adress
+
