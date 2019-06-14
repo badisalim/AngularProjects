@@ -9,7 +9,7 @@ export class Basket2Component implements OnInit {
 
   public shop = [
     {
-      branch: 'hofer',
+      branch: 'Hofer',
       baskets: [
         {
           name: 'hofer1',
@@ -30,7 +30,7 @@ export class Basket2Component implements OnInit {
       ]
     },
     {
-      branch: 'billa',
+      branch: 'Billa',
       baskets: [
         {
           name: 'billa1',
@@ -55,6 +55,7 @@ export class Basket2Component implements OnInit {
 
 
   ngOnInit() {
+    console.log(this.shop);
 
   }
 
@@ -67,7 +68,7 @@ export class Basket2Component implements OnInit {
     return branch.baskets.map(this.calculateBasketTotal).reduce((total1, total2) => total1 + total2);
   }
   public calculateProductTotal(shop) {
-    return shop.branch.baskets.map(this.calculateBranchTotal).reduce((total1, total2) => total1 + total2);
+    return shop.branch.map(this.calculateBranchTotal).reduce((total1, total2) => total1 + total2);
   }
 
 }
