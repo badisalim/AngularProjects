@@ -42,7 +42,14 @@ export class Basket3Component implements OnInit {
   public calculateProductTotal(product) {
     return product.baskets.map(this.calculateBasketTotal).reduce((total1, total2) => total1 + total2);
   }
+  public calculateShopTotal(shop) {
 
+    const baskets = shop.map(branch => this.calculateBranchTotal(branch));
+    console.log(baskets);
+
+    return baskets.reduce((one, two) => one + two);
+
+  }
 }
 
 

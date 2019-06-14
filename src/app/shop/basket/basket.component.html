@@ -11,13 +11,14 @@
     <p>Sum of Basket: {{ calculateBasketTotal(basket).toFixed(2)}}</p>
   </div>
 
-  <p>Sum of Branch: {{ calculateBranchTotal(branch).toFixed(2)}}</p>
+  <p>Sum of Branch: {{ calculateBranchTotal(branch).toFixed(2)}}</p><div></div>
+  </div><p>Total Shop: {{ calculateShopTotal(shop)}}</p>
   <p>--------------------------------------</p>
 
   
 
 
-</div>
+
 
 <h2>Purchases per Product / Branch</h2>
 <ng-container *ngFor="let product of products">

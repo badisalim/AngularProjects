@@ -44,5 +44,13 @@ export class BasketComponent implements OnInit {
     return product.branches.map(this.calculateBranchTotal2).reduce((total1, total2) => total1 + total2);
 
   }
+  public calculateShopTotal(shop) {
+
+    const baskets = shop.map(branch => this.calculateBranchTotal(branch));
+    console.log(baskets);
+
+    return baskets.reduce((one, two) => one + two);
+
+  }
 }
 
