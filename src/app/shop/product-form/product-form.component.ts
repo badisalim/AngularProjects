@@ -12,27 +12,35 @@ import { Router } from '@angular/router';
 export class ProductFormComponent implements OnInit {
   @Input() product: Product;
   @Output() save = new EventEmitter<Product>();
+  form: FormGroup;
   formGroup: FormGroup;
   routerNavigateByUrl: any;
-  form: any;
+  //  form: any;
 
   constructor(private formBuilder: FormBuilder, private productsService: ProductsService, private router: Router) { }
 
   ngOnInit() {
     this.formGroup = this.formBuilder.group({
-      id: [''],
-      name: [''],
-      code: [''],
-      price: []
+      product: [''],
+      amount: [],
+      price: [],
+      code: [],
+      // id: [''],
+      // name: [''],
+      // code: [''],
+      // price: [],
+
+
+
     });
     this.formGroup.patchValue(this.product);
   }
 
-  async submit() {
+  submit() {
     if (this.formGroup.valid) {
       console.log(this.formGroup.value);
-      await this.productsService.addProduct(this.formGroup.value);
-      // this.save.emit(this.formGroup.value);
+      this.productsService.addProduct(this.formGroup.value).toPromise();
+
       this.router.navigateByUrl('/shop/products');
     }
   }

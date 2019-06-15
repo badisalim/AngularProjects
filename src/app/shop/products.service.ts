@@ -4,11 +4,17 @@ import { Product } from './products-container/products-container.component';
 import { HttpClient } from '@angular/common/http';
 
 export interface Product {
-
   product: string;
   amount: number;
   price: number;
   code: number;
+
+  // id: number;
+  // name: string;
+
+
+
+
 }
 
 @Injectable({

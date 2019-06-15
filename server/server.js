@@ -13,37 +13,37 @@ async function init() {
     .use(cors())
     .use(express.json())
     .get('/shop/products', (req, res) => res.send(products))
-    .get('/shop/products/:id', (req, res) => {
-      const id = parseInt(req.params.id);
-      res.send(products.find(product => product.id === id));
+    .get('/shop/products/:code', (req, res) => {
+      const code = parseInt(req.params.code);
+      res.send(products.find(product => product.code === code));
     })
     .post('/shop/products', async (req, res) => {
       console.log(req.body);
       
       const product = req.body;
-      product.id = getNextId(products);
+      product.code = getNextcode(products);
       products.push(product);
       await saveData(productsFile, products).then(() => res.send(products));
     })
     .put('/shop/products', async (req, res) => {
       const product = req.body;
-      const existingProduct = products.find(p => p.id === product.id);
+      const existingProduct = products.find(p => p.code === product.code);
       Object.assign(existingProduct, product);
       await saveData(productsFile, products).then(() => res.send(products));
     })
-    .delete('/shop/products/:id', async (req, res) => {
-      const id = parseInt(req.params.id);
-      products = products.filter(p => p.id !== id);
+    .delete('/shop/products/:code', async (req, res) => {
+      const code = parseInt(req.params.code);
+      products = products.filter(p => p.code !== code);
       await saveData(productsFile, products).then(() => res.send(products));
     })
     .listen(3000, () => console.log('server started on port 3000'));
 }
 
-function getNextId(items) {
+function getNextcode(items) {
   return (
     items
-    .map(item => item.id)
-    .sort((item1, item2) => (item1.id > item2.id ? 1 : -1))
+    .map(item => item.code)
+    .sort((item1, item2) => (item1.code > item2.code ? 1 : -1))
     .pop() + 1
   );
 }

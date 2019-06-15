@@ -23,7 +23,7 @@ import { EditProductComponent } from './shop/edit-product/edit-product.component
 import { ProductsComponent } from './shop/products/products.component';
 import { ProductsContainerComponent } from './shop/products-container/products-container.component';
 import { ProductFormComponent } from './shop/product-form/product-form.component';
-
+import { Basket4Component } from './basket4/basket4.component';
 const routes: Routes = [
   {
     path: 'webdesign',
@@ -120,7 +120,11 @@ const routes: Routes = [
   {
     path: 'product-form',
     component: ProductFormComponent
-  }
+  },
+  {
+    path: 'basket4',
+    component: Basket4Component
+  },
 
 ];
 

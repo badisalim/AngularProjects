@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { SHOPS } from './basketData';
 import { Product, BranchInProduct } from '../types';
 import { MapperService } from '../mapper.service';
-import { purchases } from '../purchases';
+import { purchases } from '../../../../server/purchases';
 import { Branch, Basket } from '../types';
 
 const httpOptions = {
@@ -47,7 +47,7 @@ export class BasketComponent implements OnInit {
   public calculateShopTotal(shop) {
 
     const baskets = shop.map(branch => this.calculateBranchTotal(branch));
-    console.log(baskets);
+    // console.log(baskets);
 
     return baskets.reduce((one, two) => one + two);
 
