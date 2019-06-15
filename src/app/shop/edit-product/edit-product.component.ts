@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Product } from '../products-container/products-container.component';
+import { ProductsService } from '../products.service';
 
 @Component({
   selector: 'app-edit-product',
@@ -11,11 +12,13 @@ import { Product } from '../products-container/products-container.component';
 })
 export class EditProductComponent implements OnInit {
   product$: Observable<Product>;
+
   constructor(private httpClient: HttpClient, private route: ActivatedRoute, private router: Router) { }
 
-  ngOnInit() {
+  async ngOnInit() {
     const code = this.route.snapshot.params.code;
-    this.product$ = this.httpClient.get<Product>(`http://localhost:3000/shop/products/${code}`);
+    await this.httpClient.delete(`http://localhost:3000/shop/products/${code}`).toPromise();
+
   }
 
   async submit(product) { }
@@ -24,4 +27,12 @@ export class EditProductComponent implements OnInit {
     await this.httpClient.delete(`http://localhost:3000/shop/products/${product.code}`).toPromise();
     this.router.navigateByUrl('/shop/products');
   }
+
+  // async edit(product: Product) {
+  //   await this.httpClient.edit(`http://localhost:3000/shop/products/${product.code}`).toPromise();
+  //   this.router.navigateByUrl('/shop/products');
+
+  // }
+
+
 }

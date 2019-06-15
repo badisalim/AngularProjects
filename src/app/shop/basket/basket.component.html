@@ -11,12 +11,11 @@
     <p>Sum of Basket: {{ calculateBasketTotal(basket).toFixed(2)}}</p>
   </div>
 
-  <p>Sum of Branch: {{ calculateBranchTotal(branch).toFixed(2)}}</p><div></div>
-  </div><p>Total Shop: {{ calculateShopTotal(shop)}}</p>
-  <p>--------------------------------------</p>
-
-  
-
+  <p>Sum of Branch: {{ calculateBranchTotal(branch).toFixed(2)}}</p>
+  <div></div>
+</div>
+<p>Total Shop: {{ calculateShopTotal(shop)}}</p>
+<p>--------------------------------------</p>
 
 
 
@@ -28,16 +27,16 @@
     <table class="table">
       <thead>
 
-            <a routerLink="/add-product" class="btn btn-primary">Add Product</a>
-            
+        <a routerLink="/add-product" class="btn btn-primary">Add Product</a>
 
         <tr>
-          
+
           <th>Basket</th>
           <th>Product</th>
           <th>Code</th>
           <th>Amount</th>
           <th>Price</th>
+
         </tr>
       </thead>
       <tbody>
@@ -47,6 +46,7 @@
           <td>{{ basketItem.code }}</td>
           <td>{{ basketItem.amount }}</td>
           <td>{{ basketItem.price }}</td>
+          <td><a class="btn btn-primary" [routerLink]="['/shop', 'edit-product', product.code]">Edit</a></td>
         </tr>
       </tbody>
       <tfoot>
@@ -57,8 +57,4 @@
   </ng-container>
   <h4>Product Total: {{ calculateProductTotal(product) | currency: '€ ':'symbol':'1.2-2' }}</h4>
 </ng-container>
-<!-- <p>Product Total: {{ calculateProductTotal(product).toFixed(2)}}</p> -->
-<!-- <p>Sum of Total Sales: {{ calculateProductTotal(branch).toFixed(2)}}</p> -->
----------------------------------------------
-
 

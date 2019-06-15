@@ -31,6 +31,12 @@ async function init() {
       Object.assign(existingProduct, product);
       await saveData(productsFile, products).then(() => res.send(products));
     })
+    // .edit('/shop/products/:code', async (req, res) => {
+    //   const code = parseInt(req.params.code);
+    //   products = products.filter(p => p.code !== code);
+    //   await saveData(productsFile, products).then(() => res.send(products));
+    // })
+
     .delete('/shop/products/:code', async (req, res) => {
       const code = parseInt(req.params.code);
       products = products.filter(p => p.code !== code);

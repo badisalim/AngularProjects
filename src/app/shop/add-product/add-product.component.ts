@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { Product } from '../products-container/products-container.component';
+import { ProductsService } from '../products.service';
 @Component({
   selector: 'app-add-product',
   templateUrl: './add-product.component.html',

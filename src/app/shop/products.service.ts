@@ -12,9 +12,6 @@ export interface Product {
   // id: number;
   // name: string;
 
-
-
-
 }
 
 @Injectable({
@@ -24,12 +21,25 @@ export class ProductsService {
   host = 'http://localhost:3000/shop/products';
   constructor(private httpClient: HttpClient) { }
 
-  getProduct(): Observable<Product[]> {
+  getProducts(): Observable<Product[]> {
 
     return this.httpClient.get<Product[]>(this.host);
   }
+  getProduct(code: number): Observable<Product> {
+    return this.httpClient.get<Product>('${this.host}/${code}');
+  }
+
   addProduct(product: Product) {
     return this.httpClient.post(this.host, product);
 
   }
+  editProduct(product: Product) {
+    return this.httpClient.put(this.host, product);
+
+  }
+  deleteProduct(code: number) {
+    return this.httpClient.delete<Product>('${this.host}/${code}');
+
+  }
+
 }

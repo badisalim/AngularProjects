@@ -60,6 +60,7 @@ import { Basket4Component } from './basket4/basket4.component';
     ProductFormComponent,
     Basket4Component,
 
+
   ],
 
   imports: [

@@ -17,7 +17,7 @@ export class ProductFormComponent implements OnInit {
   routerNavigateByUrl: any;
   //  form: any;
 
-  constructor(private formBuilder: FormBuilder, private productsService: ProductsService, private router: Router) { }
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
     this.formGroup = this.formBuilder.group({
@@ -36,12 +36,11 @@ export class ProductFormComponent implements OnInit {
     this.formGroup.patchValue(this.product);
   }
 
-  submit() {
+  async submit() {
     if (this.formGroup.valid) {
       console.log(this.formGroup.value);
-      this.productsService.addProduct(this.formGroup.value).toPromise();
+      this.save.emit(this.formGroup.value);
 
-      this.router.navigateByUrl('/shop/products');
     }
   }
 
