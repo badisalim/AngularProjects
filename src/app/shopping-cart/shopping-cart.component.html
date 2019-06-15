@@ -13,15 +13,15 @@
     <tbody>
       <tr *ngFor="let item of invoice; let id=index">
         <td>
-          <input type="text" [(ngModel)]="item.description" class="form-control"z>
+          <input type="text" [(ngModel)]="item.name" class="form-control"z>
         </td>
         <td>
-          <input type="number" min="1" [(ngModel)]="item.qty" class="form-control">
+          <input type="number" min="1" [(ngModel)]="item.quantity" class="form-control">
         </td>
         <td>
-          <input type="number" min="1" [(ngModel)]="item.cost" class="form-control">
+          <input type="number" min="1" [(ngModel)]="item.price" class="form-control">
         </td>
-        <td>{{item.qty * item.cost | currency:'$'}}</td>
+        <td>{{item.quantity * item.price | currency:'$'}}</td>
         <td>
           <button (click)="removeItem(id)" class="btn btn-sm btn-danger"><img width="20px" src="../../assets/icon/trash.png"/></button>
         </td>
