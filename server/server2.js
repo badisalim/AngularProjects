@@ -42,7 +42,7 @@ async function init() {
       invoice = invoice.filter(p => p.code !== code);
       await saveData(invoiceFile, invoice).then(() => res.send(invoice));
     })
-    .listen(4000, () => console.log('server started on port 3000'));
+    .listen(3000, () => console.log('server started on port 3000'));
 }
 
 function getNextcode(items) {
