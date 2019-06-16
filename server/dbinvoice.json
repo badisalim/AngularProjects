@@ -1,0 +1,35 @@
+ {
+   "invoice": [{
+
+       "name": "Apple",
+       "quantity": 3,
+       "price": 1.10
+     },
+     {
+       "name": "Orange",
+       "quantity": 2,
+       "price": 1.99
+     },
+     {
+       "name": "Melon",
+       "quantity": 1,
+       "price": 3.22
+     },
+     {
+
+        "name": "Apple2",
+        "quantity": 3,
+        "price": 1.10
+      },
+      {
+        "name": "Orange2",
+        "quantity": 2,
+        "price": 1.99
+      },
+      {
+        "name": "Melon2",
+        "quantity": 1,
+        "price": 3.22
+      }
+   ]
+ }
