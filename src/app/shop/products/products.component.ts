@@ -13,6 +13,6 @@ export class ProductsComponent implements OnInit {
   ngOnInit() {
   }
   addItem() {
-    this.invoice.push({ qty: 1, description: "", cost: 1 });
+    this.invoice.push({ name: '1', quantity: 1, price: 1 });
   }
 }
