@@ -17,7 +17,7 @@ import { TaskComponent } from './task/task.component';
 import { TaskFormComponent } from './task-form/task-form.component';
 import { HeroComponent } from './hero/hero.component';
 import { HeroesComponent } from './heroes/heroes.component';
-import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { ShoppingCartComponent } from './shoppingCard/shopping-cart/shopping-cart.component';
 import { Basket2Component } from './basket2/basket2.component';
 import { Basket3Component } from './basket3/basket3.component';
 import { Calculator2Component } from './calculator2/calculator2.component';
@@ -28,6 +28,7 @@ import { ProductsComponent } from './shop/products/products.component';
 import { ProductsContainerComponent } from './shop/products-container/products-container.component';
 import { ProductFormComponent } from './shop/product-form/product-form.component';
 import { Basket4Component } from './basket4/basket4.component';
+import { AddNewproductComponent } from './shoppingCard/add-newproduct/add-newproduct.component';
 
 
 
@@ -59,6 +60,7 @@ import { Basket4Component } from './basket4/basket4.component';
     ProductsContainerComponent,
     ProductFormComponent,
     Basket4Component,
+    AddNewproductComponent,
 
 
   ],
