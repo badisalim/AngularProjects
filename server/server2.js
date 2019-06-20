@@ -12,44 +12,46 @@ async function init() {
   app
     .use(cors())
     .use(express.json())
-    .get('/shop/invoice', (req, res) => res.send(invoice))
-    .get('/shop/invoice/:code', (req, res) => {
-      const code = parseInt(req.params.code);
-      res.send(invoice.find(product => product.code === code));
+    .get('/invoice', (req, res) => {
+      res.send(invoice)
     })
-    .post('/shop/invoice', async (req, res) => {
+    .get('/invoice/:id', (req, res) => {
+      const id = parseInt(req.params.id);
+      res.send(invoice.find(product => product.id === id));
+    })
+    .post('/invoice', (req, res) => {
       console.log(req.body);
-      
+
       const product = req.body;
-      product.code = getNextcode(invoice);
+      product.id = getNextid(invoice);
       invoice.push(product);
-      await saveData(invoiceFile, invoice).then(() => res.send(invoice));
+      saveData(invoiceFile, invoice).then(() => res.send(invoice));
     })
-    .put('/shop/invoice', async (req, res) => {
+    .put('/invoice', async (req, res) => {
       const product = req.body;
-      const existingProduct = invoice.find(p => p.code === product.code);
+      const existingProduct = invoice.find(p => p.id === product.id);
       Object.assign(existingProduct, product);
       await saveData(invoiceFile, invoice).then(() => res.send(invoice));
     })
-    // .edit('/shop/invoice/:code', async (req, res) => {
-    //   const code = parseInt(req.params.code);
-    //   invoice = invoice.filter(p => p.code !== code);
+    // .edit('/invoice/:id', async (req, res) => {
+    //   const id = parseInt(req.params.id);
+    //   invoice = invoice.filter(p => p.id !== id);
     //   await saveData(invoiceFile, invoice).then(() => res.send(invoice));
     // })
 
-    .delete('/shop/invoice/:code', async (req, res) => {
-      const code = parseInt(req.params.code);
-      invoice = invoice.filter(p => p.code !== code);
+    .delete('/invoice/:id', async (req, res) => {
+      const id = parseInt(req.params.id);
+      invoice = invoice.filter(p => p.id !== id);
       await saveData(invoiceFile, invoice).then(() => res.send(invoice));
     })
     .listen(3000, () => console.log('server started on port 3000'));
 }
 
-function getNextcode(items) {
+function getNextid(items) {
   return (
     items
-    .map(item => item.code)
-    .sort((item1, item2) => (item1.code > item2.code ? 1 : -1))
+    .map(item => item.id)
+    .sort((item1, item2) => (item1.id > item2.id ? 1 : -1))
     .pop() + 1
   );
 }

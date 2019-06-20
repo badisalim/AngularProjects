@@ -19,7 +19,7 @@ async function init() {
     })
     .post('/shop/products', async (req, res) => {
       console.log(req.body);
-      
+
       const product = req.body;
       product.code = getNextcode(products);
       products.push(product);
@@ -41,6 +41,49 @@ async function init() {
       const code = parseInt(req.params.code);
       products = products.filter(p => p.code !== code);
       await saveData(productsFile, products).then(() => res.send(products));
+    })
+
+
+    
+   // async function init() {
+  const invoiceFile = './server/invoice.json';
+
+  let invoice = await loadData(invoiceFile);
+
+  app
+    .use(cors())
+    .use(express.json())
+    .get('/invoice', (req, res) => {
+      res.send(invoice)
+    })
+    .get('/invoice/:id', (req, res) => {
+      const id = parseInt(req.params.id);
+      res.send(invoice.find(product => product.id === id));
+    })
+    .post('/invoice', (req, res) => {
+      console.log(req.body);
+
+      const product = req.body;
+      product.id = getNextid(invoice);
+      invoice.push(product);
+      saveData(invoiceFile, invoice).then(() => res.send(invoice));
+    })
+    .put('/invoice', async (req, res) => {
+      const product = req.body;
+      const existingProduct = invoice.find(p => p.id === product.id);
+      Object.assign(existingProduct, product);
+      await saveData(invoiceFile, invoice).then(() => res.send(invoice));
+    })
+    // .edit('/invoice/:id', async (req, res) => {
+    //   const id = parseInt(req.params.id);
+    //   invoice = invoice.filter(p => p.id !== id);
+    //   await saveData(invoiceFile, invoice).then(() => res.send(invoice));
+    // })
+
+    .delete('/invoice/:id', async (req, res) => {
+      const id = parseInt(req.params.id);
+      invoice = invoice.filter(p => p.id !== id);
+      await saveData(invoiceFile, invoice).then(() => res.send(invoice));
     })
     .listen(3000, () => console.log('server started on port 3000'));
 }

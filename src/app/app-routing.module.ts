@@ -24,9 +24,9 @@ import { ProductsComponent } from './shop/products/products.component';
 import { ProductsContainerComponent } from './shop/products-container/products-container.component';
 import { ProductFormComponent } from './shop/product-form/product-form.component';
 import { Basket4Component } from './basket4/basket4.component';
-
-
-
+import { AddNewproductComponent } from './shoppingCard/add-newproduct/add-newproduct.component';
+import { InvoiceFormComponent } from './shoppingCard/invoice-form/invoice-form.component';
+import { InvoiceContainerComponent } from './shoppingCard/invoice-container/invoice-container.component';
 
 const routes: Routes = [
   {
@@ -102,15 +102,15 @@ const routes: Routes = [
     component: BasketComponent
   },
   {
-    path: 'edit-product/:code',
+    path: 'edit-product/:id',
     component: EditProductComponent
   },
   {
-    path: 'add-product',
+    path: 'add-product/:id',
     component: AddProductComponent
   },
   {
-    path: 'edit-product',
+    path: 'edit-product/:id',
     component: ProductFormComponent
   },
   {
@@ -130,6 +130,19 @@ const routes: Routes = [
     component: Basket4Component
   },
 
+  {
+    path: 'add-newproduct/:id',
+    component: AddNewproductComponent
+  },
+
+  {
+    path: 'invoice-form',
+    component: InvoiceFormComponent
+  },
+  {
+    path: 'invoice-container',
+    component: InvoiceContainerComponent
+  },
 
 
 ];

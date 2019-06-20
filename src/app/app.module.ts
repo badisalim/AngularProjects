@@ -29,6 +29,8 @@ import { ProductsContainerComponent } from './shop/products-container/products-c
 import { ProductFormComponent } from './shop/product-form/product-form.component';
 import { Basket4Component } from './basket4/basket4.component';
 import { AddNewproductComponent } from './shoppingCard/add-newproduct/add-newproduct.component';
+import { InvoiceFormComponent } from './shoppingCard/invoice-form/invoice-form.component';
+import { InvoiceContainerComponent } from './shoppingCard/invoice-container/invoice-container.component';
 
 
 
@@ -61,6 +63,8 @@ import { AddNewproductComponent } from './shoppingCard/add-newproduct/add-newpro
     ProductFormComponent,
     Basket4Component,
     AddNewproductComponent,
+    InvoiceFormComponent,
+    InvoiceContainerComponent,
 
 
   ],

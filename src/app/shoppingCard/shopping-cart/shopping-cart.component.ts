@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { ProductsService } from '../invoice.service';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -11,11 +12,11 @@ export class ShoppingCartComponent implements OnInit {
   HttpClient: any;
   data: any;
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient, private productService: ProductsService) { }
 
 
   ngOnInit() {
-    this.httpClient.get('http://localhost:3000/shop/invoice')
+    this.httpClient.get('http://localhost:3000/invoice')
       .subscribe(data => {
         console.log(data);
         this.data = data;
@@ -23,7 +24,10 @@ export class ShoppingCartComponent implements OnInit {
   }
 
   addItem() {
+
     this.data.push({ name: '', quantity: 1, price: 1 });
+    // CALL SERVICE
+    this.productService.addProduct({ name: '', quantity: 1, price: 1 });
   }
 
   total() {

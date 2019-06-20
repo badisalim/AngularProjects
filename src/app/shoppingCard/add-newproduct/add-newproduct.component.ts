@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
+import { Product } from '../invoice-container/invoice-container.component';
+
+
+
 
 @Component({
   selector: 'app-add-newproduct',
@@ -7,9 +13,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddNewproductComponent implements OnInit {
 
-  constructor() { }
+  constructor(private httpClient: HttpClient, private router: Router) { }
 
   ngOnInit() {
   }
-
+  async submit(product: Product) {
+    await this.httpClient.post('http://localhost:3000/invoice', product).toPromise();
+    this.router.navigateByUrl('/invoice');
+  }
 }

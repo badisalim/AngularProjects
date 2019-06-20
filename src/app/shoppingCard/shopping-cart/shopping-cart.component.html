@@ -3,7 +3,7 @@
   <table class="table table-bordered">
     <thead class="bg-danger text-white text-upparcase">
       <tr>
-        <th>Product</th>
+        <th>Product----</th>
         <th>Quantity</th>
         <th>Price</th>
         <th>Total</th>
@@ -28,8 +28,8 @@
         </td>
       </tr>
       <tr>
-        <td><button (click)="addItem()" class="btn btn-sm btn-primary rounded-0">
-          Add Product</button></td>
+        <td><button type="button" (click)="addItem()" class="btn btn-sm btn-primary rounded-0">
+          Add Product ...</button></td>
         <td></td>
         <td>Total:</td>
         <td>{{total() | currency:'$'}}</td>
