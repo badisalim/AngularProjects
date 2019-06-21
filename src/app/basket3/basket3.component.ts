@@ -17,19 +17,19 @@ export class Basket3Component implements OnInit {
   shop: any;
   constructor(private httpClient: HttpClient) { }
 
+  // ngOnInit() {
+  //   this.httpClient.get("https://my-json-server.typicode.com/badisalim/AngularProjects/shop")
+  //     .subscribe(shop => this.shop = shop);
+  // }
+
+
   ngOnInit() {
-    this.httpClient.get("https://my-json-server.typicode.com/badisalim/AngularProjects/shop")
-      .subscribe(shop => this.shop = shop);
+    this.httpClient.get('http://localhost:3000/shop/products')
+      .subscribe(shop => {
+        console.log(shop);
+        this.shop = shop;
+      });
   }
-
-
-// ngOnInit() {
-//   this.httpClient.get('http://localhost:3000/dbshop')
-//     .subscribe(shop => {
-//       console.log(shop);
-//       this.shop = shop;
-//     });
-// }
 
   public calculateBasketTotal(basket) {
     const productsTotal = basket.products.map(product => product.amount * product.price);
@@ -42,7 +42,14 @@ export class Basket3Component implements OnInit {
   public calculateProductTotal(product) {
     return product.baskets.map(this.calculateBasketTotal).reduce((total1, total2) => total1 + total2);
   }
+  public calculateShopTotal(shop) {
 
+    const baskets = shop.map(branch => this.calculateBranchTotal(branch));
+    console.log(baskets);
+
+    return baskets.reduce((one, two) => one + two);
+
+  }
 }
 
 

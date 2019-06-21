@@ -12,5 +12,9 @@ div {
 
 h1 {
   font-family: Lato;
-  margin-left: 25px;
+  margin-left: 2z5px;
+}
+.container{
+
+  margin-left:50px;
 }

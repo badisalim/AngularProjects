@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { log } from 'util';
 
 @Component({
   selector: 'app-basket2',
@@ -9,7 +10,7 @@ export class Basket2Component implements OnInit {
 
   public shop = [
     {
-      branch: 'hofer',
+      branch: 'Hofer',
       baskets: [
         {
           name: 'hofer1',
@@ -30,7 +31,7 @@ export class Basket2Component implements OnInit {
       ]
     },
     {
-      branch: 'billa',
+      branch: 'Billa',
       baskets: [
         {
           name: 'billa1',
@@ -55,6 +56,7 @@ export class Basket2Component implements OnInit {
 
 
   ngOnInit() {
+    console.log(this.shop);
 
   }
 
@@ -66,10 +68,14 @@ export class Basket2Component implements OnInit {
   public calculateBranchTotal(branch) {
     return branch.baskets.map(this.calculateBasketTotal).reduce((total1, total2) => total1 + total2);
   }
-  public calculateProductTotal(branch) {
-    return branch.baskets.map(this.calculateBasketTotal).reduce((total1, total2) => total1 + total2);
-  }
+  public calculateShopTotal(shop) {
 
+    const baskets = shop.map(branch => this.calculateBranchTotal(branch));
+    console.log(baskets);
+
+    return baskets.reduce((one, two) => one + two);
+
+  }
 }
 
 
