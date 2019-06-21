@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { SHOPS } from './basketData';
 import { Product, BranchInProduct } from '../types';
-import { MapperService } from '../mapper.service';
+//import { MapperService } from '../mapper.service';
 import { purchases } from '../../../../server/purchases';
 import { Branch, Basket } from '../types';
+import { MapperService } from 'src/app/shoppingCard/mapper.service';
 
 const httpOptions = {
   headers: new HttpHeaders({
