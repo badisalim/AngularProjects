@@ -1,4 +1,37 @@
-.container {
+h1 {
+  text-align: center;
+
+}
+
+h3 {
+
+  text-align: center;
+}
+
+p {
+
+  text-align: center;
+}
+
+div.row {
+  text-align: center;
+}
+
+input[type='number'] {
+  font-size: 2em;
+  width: 1.5em;
+  margin: 0.25em;
+  text-align: center;
+}
+
+input.btn {
+  margin: 2em;
+}
+
+
+
+
+/* .container {
     display: flex;
     justify-content: center;
   }
@@ -6,10 +39,7 @@
   h1 {
     text-align: center;
   }
-  h1{
-    text-align: center;
-    
-  }
+ 
   
   
   .board{
@@ -54,3 +84,4 @@
   .ok {
   color: #00ff00;
   }
+ */
