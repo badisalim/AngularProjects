@@ -27,6 +27,7 @@ import { Basket4Component } from './basket4/basket4.component';
 import { AddNewproductComponent } from './shoppingCard/add-newproduct/add-newproduct.component';
 import { InvoiceFormComponent } from './shoppingCard/invoice-form/invoice-form.component';
 import { InvoiceContainerComponent } from './shoppingCard/invoice-container/invoice-container.component';
+import { EditComponent } from './shoppingCard/edit/edit.component';
 
 const routes: Routes = [
   {
@@ -143,7 +144,10 @@ const routes: Routes = [
     path: 'invoice-container',
     component: InvoiceContainerComponent
   },
-
+  {
+    path: 'edit/:id',
+    component: EditComponent
+  },
 
 ];
 

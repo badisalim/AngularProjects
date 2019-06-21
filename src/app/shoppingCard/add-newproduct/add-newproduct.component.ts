@@ -19,6 +19,6 @@ export class AddNewproductComponent implements OnInit {
   }
   async submit(product: Product) {
     await this.httpClient.post('http://localhost:3000/invoice', product).toPromise();
-    this.router.navigateByUrl('/invoice');
+    this.router.navigateByUrl('/shop/invoice');
   }
 }
