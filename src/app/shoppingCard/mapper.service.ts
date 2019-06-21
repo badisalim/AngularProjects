@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 // tslint:disable-next-line: no-unused-expression
 import { Purchases, Branch, Basket, Product, FullBasketItem } from './types'; './types';
 import _ from 'lodash';
-import { from } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
