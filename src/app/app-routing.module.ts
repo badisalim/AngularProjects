@@ -21,8 +21,16 @@ import { Basket2Component } from './basket2/basket2.component';
 import { Basket3Component } from './basket3/basket3.component';
 import { Calculator2Component } from './calculator2/calculator2.component';
 
-
-
+import { AddProductComponent } from './shop/add-product/add-product.component';
+import { EditProductComponent } from './shop/edit-product/edit-product.component';
+import { ProductsComponent } from './shop/products/products.component';
+import { ProductsContainerComponent } from './shop/products-container/products-container.component';
+import { ProductFormComponent } from './shop/product-form/product-form.component';
+import { Basket4Component } from './basket4/basket4.component';
+import { AddNewproductComponent } from './shoppingCard/add-newproduct/add-newproduct.component';
+import { InvoiceFormComponent } from './shoppingCard/invoice-form/invoice-form.component';
+import { InvoiceContainerComponent } from './shoppingCard/invoice-container/invoice-container.component';
+import { EditComponent } from './shoppingCard/edit/edit.component';
 
 const routes: Routes = [
   {
@@ -40,10 +48,6 @@ const routes: Routes = [
   {
     path: 'sudoku',
     component: SudokuComponent
-  },
-  {
-    path: 'basket',
-    component: BasketComponent
   },
   {
     path: 'password',
@@ -96,6 +100,56 @@ const routes: Routes = [
   {
     path: 'calculator2',
     component: Calculator2Component
+  },
+  {
+    path: 'basket',
+    component: BasketComponent
+  },
+  {
+    path: 'edit-product/:id',
+    component: EditProductComponent
+  },
+  {
+    path: 'add-product/:id',
+    component: AddProductComponent
+  },
+  {
+    path: 'edit-product/:id',
+    component: ProductFormComponent
+  },
+  {
+    path: 'products',
+    component: ProductsComponent
+  },
+  {
+    path: 'product-container',
+    component: ProductsContainerComponent
+  },
+  {
+    path: 'product-form',
+    component: ProductFormComponent
+  },
+  {
+    path: 'basket4',
+    component: Basket4Component
+  },
+
+  {
+    path: 'add-newproduct/:id',
+    component: AddNewproductComponent
+  },
+
+  {
+    path: 'invoice-form',
+    component: InvoiceFormComponent
+  },
+  {
+    path: 'invoice-container',
+    component: InvoiceContainerComponent
+  },
+  {
+    path: 'edit/:id',
+    component: EditComponent
   },
 
 ];

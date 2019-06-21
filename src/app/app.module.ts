@@ -24,6 +24,18 @@ import { ShoppingCartComponent } from './shoppingCard/shopping-cart/shopping-car
 import { Basket2Component } from './basket2/basket2.component';
 import { Basket3Component } from './basket3/basket3.component';
 import { Calculator2Component } from './calculator2/calculator2.component';
+import { AddProductComponent } from './shop/add-product/add-product.component';
+import { EditProductComponent } from './shop/edit-product/edit-product.component';
+import { ProductsComponent } from './shop/products/products.component';
+import { ProductsContainerComponent } from './shop/products-container/products-container.component';
+import { ProductFormComponent } from './shop/product-form/product-form.component';
+import { Basket4Component } from './basket4/basket4.component';
+import { AddNewproductComponent } from './shoppingCard/add-newproduct/add-newproduct.component';
+import { InvoiceFormComponent } from './shoppingCard/invoice-form/invoice-form.component';
+import { InvoiceContainerComponent } from './shoppingCard/invoice-container/invoice-container.component';
+import { EditComponent } from './shoppingCard/edit/edit.component';
+
+
 
 @NgModule({
   declarations: [
@@ -33,7 +45,6 @@ import { Calculator2Component } from './calculator2/calculator2.component';
     EmailComponent,
     CalculatorComponent,
     SudokuComponent,
-    BasketComponent,
     PasswordComponent,
     ProjectsComponent,
     ChessComponent,
@@ -46,7 +57,21 @@ import { Calculator2Component } from './calculator2/calculator2.component';
     Basket2Component,
     Basket3Component,
     Calculator2Component,
-    ],
+    AppComponent,
+    BasketComponent,
+    AddProductComponent,
+    EditProductComponent,
+    ProductsComponent,
+    ProductsContainerComponent,
+    ProductFormComponent,
+    Basket4Component,
+    AddNewproductComponent,
+    InvoiceFormComponent,
+    InvoiceContainerComponent,
+    EditComponent,
+
+
+  ],
 
   imports: [
     BrowserModule,

@@ -1,0 +1,21 @@
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>Show or Hide </th>
+        <th>Product</th>
+        <th>Code</th>
+        <th>Avaiable</th>
+        <th>Price</th>
+    </tr>
+    <tr data-ng-repeat="(productIndex, product) in products">
+        <td><input type="button" class="btn btn-primary" value="Hide" data-ng-click="removeRow(productIndex)"/></td>
+        <td>{{product.productName}}</td>
+        <td>{{product.productCode}}</td>
+        <td>{{product.releaseDate}}</td>
+        <td>{{product.price | currency}}</td>
+    </tr>
+</table>
+
+
+$scope.removeRow = function (productIndex) {
+    $scope.products.splice(productIndex, 1);
+}
