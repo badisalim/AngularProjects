@@ -1,8 +1,9 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { WebdesignComponent } from './webdesign/webdesign.component';
 import { ParticipantComponent } from './participant/participant.component';
 import { CalculatorComponent } from './calculator/calculator.component';

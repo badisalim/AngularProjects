@@ -1,8 +1,9 @@
+import { AppComponent } from '../app.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BasketComponent } from './basket/basket.component';
 import { RouterModule } from '@angular/router';
-import { AppComponent } from '../app.component';
+
 import { AddProductComponent } from './add-product/add-product.component';
 import { EditProductComponent } from './edit-product/edit-product.component';
 import { ProductsComponent } from './products/products.component';
