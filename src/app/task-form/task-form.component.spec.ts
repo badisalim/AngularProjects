@@ -10,7 +10,7 @@ describe('TaskFormComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ TaskFormComponent ]
     })
-    .compileComponents();z
+    .compileComponents();
   }));
 
   beforeEach(() => {
