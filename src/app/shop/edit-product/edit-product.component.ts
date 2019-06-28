@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Product } from '../products-container/products-container.component';
-import { ProductsService } from '../products.service';
+import { ProductsService } from '../service/products.service';
 
 @Component({
   selector: 'app-edit-product',

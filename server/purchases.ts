@@ -1,4 +1,4 @@
-import { Purchases } from '../src/app/shop/types';
+import { Purchases } from '../src/app/shop/service/types';
 
 export const purchases: Purchases = {
     Hofer: {

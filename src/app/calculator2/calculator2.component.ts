@@ -11,6 +11,9 @@ export class Calculator2Component {
   public num1: number;
   public num2: number;
   public result: number;
+  public name: string;
+  public result2: string;
+
 
   add() {
     this.result = this.num1 + this.num2;
@@ -24,5 +27,9 @@ export class Calculator2Component {
   devide() {
     this.result = (this.num1) / (this.num2);
   }
+  addname() {
 
+    this.result2 = this.name;
+
+  }
 }

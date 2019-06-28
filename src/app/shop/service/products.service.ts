@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Product } from './products-container/products-container.component';
+import { Product } from '../products-container/products-container.component';
 import { HttpClient } from '@angular/common/http';
 
 export interface Product {
@@ -30,7 +30,7 @@ export class ProductsService {
   }
 
   addProduct(product: Product) {
-    console.log("123");
+    //console.log('123');
 
     return this.httpClient.post(this.host, product).subscribe(data => console.log(data));
 

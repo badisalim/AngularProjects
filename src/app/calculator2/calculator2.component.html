@@ -10,12 +10,14 @@
       <div class="form-group d-flex flex-row">
         <input [(ngModel)]='num1' type="number" name="num1" class="form-control">
         <input [(ngModel)]='num2' type="number" name="num2" class="form-control">
+        <input [(ngModel)]='name' type="string"  class="form-control">
       </div>
       <div class="d-flex flex-row justify-content-between">
         <button class="btn btn-success" (click)="add()">Sum</button>
         <button class="btn btn-primary" (click)="minus()">Minus</button>
         <button class="btn btn-danger" (click)="multiply()">Multiply</button>
         <button class="btn btn-warning" (click)="devide()">Devide</button>
+        <button class="btn btn-warning" (click)="name()">Name</button>
       </div>
     </div>
     <div class="card-footer">

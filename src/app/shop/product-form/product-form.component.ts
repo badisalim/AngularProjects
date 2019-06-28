@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Product } from '../products-container/products-container.component';
-import { ProductsService } from '../products.service';
+import { ProductsService } from '../service/products.service';
 import { Router } from '@angular/router';
 
 @Component({
