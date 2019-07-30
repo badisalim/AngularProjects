@@ -27,4 +27,14 @@ to store and load images in github.
 github/AngularProjects/assets/image/download
 then copy http adress
 put it in your html adress
+----------------------------------------
+git status
+git add .
+git commit -m "update"
+git push(to push files to github)
+-------------------------------
+git pull origin master (to pull files from github)
+--------------------------------------
+git branch (to know which branch we are)
+git checkout badiRaslan (to transfer to your branch)
 
