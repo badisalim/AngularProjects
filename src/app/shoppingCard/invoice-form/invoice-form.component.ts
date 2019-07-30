@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 
 import { Product } from '../invoice-container/invoice-container.component';
 import { Router } from '@angular/router';
-import { ProductsService } from 'src/app/shoppingCard/invoice.service';
+import { ProductsService } from '../../shoppingCard/invoice.service';
 
 @Component({
   selector: 'app-invoice-form',
