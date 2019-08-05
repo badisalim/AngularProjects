@@ -11,7 +11,6 @@ const httpOptions = {
 })
 export class Basket4Component implements OnInit {
 
-
   HttpClient: any;
   shop: any;
   constructor(private httpClient: HttpClient) { }

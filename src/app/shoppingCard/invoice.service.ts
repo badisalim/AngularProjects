@@ -17,6 +17,10 @@ export interface Product {
   providedIn: 'root'
 })
 export class ProductsService {
+  addNewProduct(arg0: { name: string; quantity: number; price: number; }) {
+    throw new Error('Method not implemented.');
+  }
+
   host = 'http://localhost:3000/invoice';
   constructor(private httpClient: HttpClient) { }
 

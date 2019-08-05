@@ -8,7 +8,7 @@ import { WebdesignComponent } from './webdesign/webdesign.component';
 import { ParticipantComponent } from './participant/participant.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { SudokuComponent } from './sudoku/sudoku.component';
-import { BasketComponent } from './shop/basket/basket.component';
+import { BasketComponent } from './basket1/basket1/basket.component';
 import { PasswordComponent } from './password/password.component';
 import { EmailComponent } from './email/email.component';
 import { ProjectsComponent } from './projects/projects.component';
@@ -25,11 +25,11 @@ import { ShoppingCartComponent } from './shoppingCard/shopping-cart/shopping-car
 import { Basket2Component } from './basket2/basket2.component';
 import { Basket3Component } from './basket3/basket3.component';
 import { Calculator2Component } from './calculator2/calculator2.component';
-import { AddProductComponent } from './shop/add-product/add-product.component';
-import { EditProductComponent } from './shop/edit-product/edit-product.component';
-import { ProductsComponent } from './shop/products/products.component';
-import { ProductsContainerComponent } from './shop/products-container/products-container.component';
-import { ProductFormComponent } from './shop/product-form/product-form.component';
+import { AddProductComponent } from './basket1/add-product/add-product.component';
+import { EditProductComponent } from './basket1/edit-product/edit-product.component';
+import { ProductsComponent } from './basket1/products/products.component';
+import { ProductsContainerComponent } from './basket1/products-container/products-container.component';
+import { ProductFormComponent } from './basket1/product-form/product-form.component';
 import { Basket4Component } from './basket4/basket4.component';
 import { AddNewproductComponent } from './shoppingCard/add-newproduct/add-newproduct.component';
 import { InvoiceFormComponent } from './shoppingCard/invoice-form/invoice-form.component';
@@ -70,6 +70,7 @@ import { EditComponent } from './shoppingCard/edit/edit.component';
     InvoiceFormComponent,
     InvoiceContainerComponent,
     EditComponent,
+ 
 
 
   ],
