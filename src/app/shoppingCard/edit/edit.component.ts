@@ -1,10 +1,10 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { Product } from '../invoice-container/invoice-container.component';
-
-
+import { Router } from '@angular/router';
+import { ProductsService } from '../invoice.service';
 @Component({
   selector: 'app-edit',
   templateUrl: './edit.component.html',
@@ -12,17 +12,34 @@ import { Product } from '../invoice-container/invoice-container.component';
 })
 
 export class EditComponent implements OnInit {
-  product$: Observable<Product>;
+   @Input() product: Product;
+  @Output() save = new EventEmitter<Product>();
+  form: any;
+  formGroup: FormGroup;
+  routerNavigateByUrl: any;
+  httpClient: any;
+  constructor(private formBuilder: FormBuilder, private productsService: ProductsService, private router: Router) { }
+   ngOnInit() {
+    this.formGroup = this.formBuilder.group({
+      id: [],
+      name: [''],
+      quantity: [],
+      price: [],
 
-  constructor(private httpClient: HttpClient, private route: ActivatedRoute, private router: Router) { }
 
-  async ngOnInit() {
-    const id = this.route.snapshot.params.id;
-    //await this.httpClient.delete(`http://localhost:3000/invoice/${id}`).toPromise();
-    this.product$ = this.httpClient.get<Product>(`http://localhost:3000/invoice/${id}`);
+    });
+    this.formGroup.patchValue(this.product);
   }
 
-  async submit(product) { }
+  async submit() {
+    if (this.formGroup.valid) {
+      console.log(this.formGroup.value);
+      await this.productsService.addItem(this.formGroup.value);
+      this.save.emit(this.formGroup.value);
+      this.router.navigateByUrl('/invoice');
+
+    }
+  }
 
   async remove(product) {
     await this.httpClient.delete(`http://localhost:3000/invoice/${product.id}`).toPromise();
