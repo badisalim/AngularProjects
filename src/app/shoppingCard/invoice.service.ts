@@ -41,8 +41,12 @@ export class ProductsService {
     return this.httpClient.post(this.host, product).subscribe(data => console.log(data));
   }
   editProduct(product: Product) {
+    //return this.httpClient.put(this.host, product);
+    return this.httpClient.post(this.host, product).subscribe(data => console.log(data));
+  }
+  editItem(product: Product) {
+   // return this.httpClient.post(this.host, product).subscribe(data => console.log(data));
     return this.httpClient.put(this.host, product);
-
   }
   deleteProduct(id: number) {
     return this.httpClient.delete<Product>('${this.host}/${id}');

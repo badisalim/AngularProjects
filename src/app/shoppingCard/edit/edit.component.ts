@@ -37,23 +37,24 @@ export class EditComponent implements OnInit {
       await this.productsService.addItem(this.formGroup.value);
       this.save.emit(this.formGroup.value);
       this.router.navigateByUrl('/invoice');
-
+      this.router.navigateByUrl('/shop/products');
     }
   }
 
   async remove(product) {
     await this.httpClient.delete(`http://localhost:3000/invoice/${product.id}`).toPromise();
+    await this.httpClient.delete(`http://localhost:3000/shop/products/${product.id}`).toPromise();
     this.router.navigateByUrl('/invoice');
 
     this.router.navigateByUrl('/shop/products');
 
   }
 
-  // async edit(product: Product) {
-  //   await this.httpClient.edit(`http://localhost:3000/invoice/${product.id}`).toPromise();
-  //   this.router.navigateByUrl('/invoice');
+  async edit(product: Product) {
+    await this.httpClient.edit(`http://localhost:3000/invoice/${product.id}`).toPromise();
+    this.router.navigateByUrl('/invoice');
 
-  // }
+  }
 
 
 }

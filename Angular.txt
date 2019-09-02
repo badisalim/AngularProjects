@@ -39,6 +39,14 @@ git branch (to know which branch we are)
 git checkout badiRaslan (to transfer to your branch)
 
 -----------------------------------
+* in case of problem with commit
+1.git init
+2.git config user.name "badisalim"
+3.git config user.email "badisalim@gmail.com"
+4.git add *
+5.git commit -m "some init msg"
+
+-----------------------------------
 sudo npm install
 sudo npm install --save jest
 sudo npm install --save lodash

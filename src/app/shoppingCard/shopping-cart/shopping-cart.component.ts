@@ -25,9 +25,15 @@ export class ShoppingCartComponent implements OnInit {
 
   addItem() {
 
-    this.data.push({ name: '', quantity: 1, price: 1 });
+    this.data.push({ name: '', quantity: 1, price: 1, id: 1 });
     // CALL SERVICE
-    this.productService.addProduct({ name: '', quantity: 1, price: 1 });
+    this.productService.addProduct({ name: '', quantity: 1, price: 1 , id: 1 });
+  }
+  editItem() {
+
+    this.data.push({ name: '', quantity: 1, price: 1, id: 1  });
+    // CALL SERVICE
+    this.productService.editProduct({ name: '', quantity: 1, price: 1 , id: 1 });
   }
 
   total() {

@@ -44,8 +44,8 @@ async function init() {
     })
 
 
-    
-   // async function init() {
+
+  // async function init() {
   const invoiceFile = './server/invoice.json';
 
   let invoice = await loadData(invoiceFile);

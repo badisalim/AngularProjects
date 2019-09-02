@@ -2,7 +2,8 @@
   calculator2 works!
 </p>
 <div class="text-center">
-<h3>Simple Calculator Using Angular</h3></div>
+  <h3>Simple Calculator Using Angular</h3>
+</div>
 <div class="container">
   <div class="card">
     <div class="card-header text-center text-uppercase"> Calculator</div>
@@ -10,7 +11,7 @@
       <div class="form-group d-flex flex-row">
         <input [(ngModel)]='num1' type="number" name="num1" class="form-control">
         <input [(ngModel)]='num2' type="number" name="num2" class="form-control">
-        <input [(ngModel)]='name' type="string"  class="form-control">
+        <input [(ngModel)]='name' type="string" name="name" class="form-control">
       </div>
       <div class="d-flex flex-row justify-content-between">
         <button class="btn btn-success" (click)="add()">Sum</button>
@@ -22,5 +23,5 @@
     </div>
     <div class="card-footer">
 
-      <p>The sum of {{num1}} and {{num2}} = {{result}}</p>
+      <p>The sum of {{num1}} and {{num2}} = {{result}}{{" $ "}}{{name}}</p>
     </div>
