@@ -17,7 +17,7 @@ export class Basket4Component implements OnInit {
 
 
   ngOnInit() {
-    this.httpClient.get('http://localhost:3000/shop/products')
+    this.httpClient.get('http://localhost:3000/products')
       .subscribe(shop => {
         console.log(shop);
         this.shop = shop;

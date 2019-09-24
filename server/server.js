@@ -12,12 +12,12 @@ async function init() {
   app
     .use(cors())
     .use(express.json())
-    .get('/shop/products', (req, res) => res.send(products))
-    .get('/shop/products/:code', (req, res) => {
+    .get('/products', (req, res) => res.send(products))
+    .get('/products/:code', (req, res) => {
       const code = parseInt(req.params.code);
       res.send(products.find(product => product.code === code));
     })
-    .post('/shop/products', async (req, res) => {
+    .post('/products', async (req, res) => {
       console.log(req.body);
 
       const product = req.body;
@@ -25,19 +25,19 @@ async function init() {
       products.push(product);
       await saveData(productsFile, products).then(() => res.send(products));
     })
-    .put('/shop/products', async (req, res) => {
+    .put('/products', async (req, res) => {
       const product = req.body;
       const existingProduct = products.find(p => p.code === product.code);
       Object.assign(existingProduct, product);
       await saveData(productsFile, products).then(() => res.send(products));
     })
-    // .edit('/shop/products/:code', async (req, res) => {
+    // .edit('/products/:code', async (req, res) => {
     //   const code = parseInt(req.params.code);
     //   products = products.filter(p => p.code !== code);
     //   await saveData(productsFile, products).then(() => res.send(products));
     // })
 
-    .delete('/shop/products/:code', async (req, res) => {
+    .delete('/products/:code', async (req, res) => {
       const code = parseInt(req.params.code);
       products = products.filter(p => p.code !== code);
       await saveData(productsFile, products).then(() => res.send(products));
